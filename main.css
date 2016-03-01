@@ -4,7 +4,7 @@ header {
     padding:5px;
     text-align:center;
     text-transform: uppercase;
-}   
+}
 
 header img {
     max-width: 100%;
@@ -14,13 +14,13 @@ header img {
 h1 {
     font-size:3em;
     text-align:center;
-    padding:5px; 
+    padding:5px;
 }
 
 h2 {
     font-size:2em;
     text-align:center;
-    padding:5px; 
+    padding:5px;
 }
 
 p {
@@ -35,7 +35,7 @@ p {
 body {
     background-image: url("food/food.png");
     background-repeat: repeat;
-   
+
 }
 
 body p {
@@ -50,7 +50,7 @@ img {
 }
 
 nav {
-    float: none;    
+    float: none;
     text-align:center;
     padding-left: 0%;
     padding-right: 5%;
@@ -76,7 +76,7 @@ article {
 aside h2 {
     font-size:1.5em;
     text-align:left;
-    padding:0px;     
+    padding:0px;
 }
 
 aside h3 {
@@ -97,7 +97,7 @@ li {
     margin-bottom: 5px;
     margin-right: 0px;
     margin-left: 0px;
- 
+
 }
 
 .votingStars span {
