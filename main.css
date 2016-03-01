@@ -6,6 +6,13 @@ header {
     text-transform: uppercase;
 }
 
+footer {
+    color:#808080;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}
+
 header img {
     max-width: 100%;
     height: auto;
@@ -60,6 +67,7 @@ nav h3 {
     text-align: center;
 }
 
+
 aside {
     float: left;
     padding-left: 5%;
@@ -72,6 +80,11 @@ article {
     padding-left: 5%;
 }
 
+section {
+    float: left;
+    width: 50%;
+    padding-left: 5%;
+}
 
 aside h2 {
     font-size:1.5em;
