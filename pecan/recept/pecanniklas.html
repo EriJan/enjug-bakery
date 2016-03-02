@@ -17,7 +17,9 @@
         
         <link rel="stylesheet" href="../css/bootstrap.css">
 
-        <script src="../js/new.js"></script>       
+        <script src="../js/new.js"></script> 
+        <script src="../js/math.min.js"></script>
+        
     </head>
     <body onload="changePecanAmount(localStorage['pecanAmount']);">
         <nav class="navbar navbar-inverse">             
@@ -50,19 +52,16 @@
                     <span class="rate" id="5">★</span>
         </div>
         <div id="loading" style="display:none"><img src="../../applepie/resources/ajax-loader.gif" alt="loading"></div><span id="average"></span>
-            
-                
-        
     
             <div class="hideOrNot">                    
                         <ul id="paj">
                             Pajskal
-                            <li><span id="pajSemper">2.5</span> dl Semper - fin mjölmix</li>
-                            <li><span id="pajKokosmjöl">0.5</span> dl Kokosmjöl</li>
-                            <li><span id="pajsmör">150 </span> g smör</li>
-                            <li><span id="pajsalt">0.5</span> tsk salt</li>
-                            <li><span id="pajströsocker">0.5</span> dl strösocker</li>
-                            <li><span id="pajvatten">2</span> msk vatten</li>
+                            <li>5 / 2 dl Semper - fin mjölmix</li>
+                            <li>1 / 2 dl Kokosmjöl</li>
+                            <li>150 g smör</li>
+                            <li>1 / 2 tsk salt</li>
+                            <li>1 / 2 dl strösocker</li>
+                            <li>4 / 2 msk vatten</li>
                         </ul>                   
                     
                     <span id = small></span>                   
@@ -71,8 +70,8 @@
                             Fyllning
                             <li><span id="fyllsemper">2</span> msk Semper - fin mjölmix</li>
                             <li><span id="fyllsmör">125</span> gr smör</li>
-                            <li><span id="fyllströsocker">1.5</span> dl strösocker</li>
-                            <li><span id="fyllsalt">0.5</span> tsk salt</li>
+                            <li><span id="fyllströsocker">3 / 2</span> dl strösocker</li>
+                            <li><span id="fyllsalt">1 / 2</span> tsk salt</li>
                             <li><span id="fyllsirap">3</span> dl ljus sirap</li>                        
                             <li><span id="fyllägg">2</span> ägg (lätt vispade)</li>
                             <li><span id="fyllvaniljsocker">1</span> tsk vaniljsocker</li>
