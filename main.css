@@ -44,14 +44,6 @@ body {
     background-repeat: repeat;
 
 }
-
-body p {
-    text-align: justify;
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-bottom: 5%;
-}
-
 img {
     border-radius: 15px;
 }
@@ -67,23 +59,38 @@ nav h3 {
     text-align: center;
 }
 
-
-aside {
+section {
     float: left;
+    width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+article h3 {
+    font-size:1.5em;
+    text-align:center;
+    padding:3px;
+}
+
+article:first-child {
+    float: left;
+    width: 90%;
     padding-left: 5%;
-    padding-bottom: 5%;
+    padding-right: 5%;
 }
 
 article {
     float: left;
-    width: 50%;
+    width: 60%;
     padding-left: 5%;
+    padding-right: 5%;
 }
 
-section {
+aside {
     float: left;
-    width: 50%;
     padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 aside h2 {
@@ -128,20 +135,4 @@ li {
 
 #wait {
     text-align: center;
-}
-
-@media screen and (max-width: 500px) {
-    aside {
-        float: none;
-        width: 100%;
-        padding-left: 25%;
-        text-align: left;
-    }
-
-    article {
-        float: none;
-        width: 100%;
-        padding-left: 1%;
-        padding-right: 1%;
-    }
 }
