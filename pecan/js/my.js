@@ -744,13 +744,13 @@ function changeClick() { //this is for the hintclicker link..
 function changeImg() { //this is for the hintclicker img..
     'use strict';
     var imagelinkTarget = document.getElementById('changingImg');
-    imagelinkTarget.src = linkToImgs[linkId];
+   // imagelinkTarget.src = linkToImgs[linkId];
     //alert("linkToImgs");
 }
 
 function changeImgText() { //this is for the hintclicker text..
     'use strict';
-    document.getElementById('imgText').innerHTML = theNames[linkId];
+  //  document.getElementById('imgText').innerHTML = theNames[linkId];
 }
 
 /*
