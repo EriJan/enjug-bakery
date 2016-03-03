@@ -7,12 +7,13 @@ function getRandomInt(min, max) {
 //todayslink
 var theNames = ["Pankakstårta", "Mazarin", "Äppelpaj", "Pecanpaj"];
 var linkToURLs = ["recept1.html", "recept2.html", "recept3.html", "recept4.html"];
-var linkToImgs = ["./img/img1.png", "./img/img2.png", "./img/img3.png", "./img/img4.png"];
+var linkToImgs = ["pecan/img/img1.png", "pecan/img/img2.png", "pecan/img/img3.png", "pecan/img/img4.png"];
 var linkId;
 linkId = getRandomInt(0, 3);
 
 function linkobjectAlert() { //just for info..
     'use strict';
+    console.log("Används denna metod ");
     //linkId = getRandomInt(0, 3);
     return linkId + ' : ' + theNames[linkId] + ' ' + linkToURLs[linkId] + ' ' + linkToImgs[linkId];
 }
@@ -47,10 +48,31 @@ function changeImg() { //this is for the hintclicker img..
 function changeImgText() { //this is for the hintclicker text..
     'use strict';
     document.getElementById('imgText').innerHTML = theNames[linkId];
+    changePresText(theNames[linkId]);
+    
     //$(theNames[linkId]).hide(500);
     $(theNames[linkId]).show(500);
 }
 
+function changePresText(name){
+          
+    var lista = document.getElementById("tipOfDay").childNodes;
+    for(var i = 0; i < lista.length; i++){
+                    console.log("innan första "+lista[i].id + " " + name)
+
+        if(lista[i].id !== undefined){
+                    console.log("efter första "+lista[i].id + " " + name)
+        if(lista[i].id == name){
+           lista[i].style.display = 'block';
+            console.log("I andra ifsatsen");
+        } else {
+                      // lista[i].style.display = 'block';
+
+            lista[i].style.display = 'none';
+        }
+    }
+    }
+}
 /*
 <span id = "hintRecept">                
                     <a href="recept/pecanniklas.html">
