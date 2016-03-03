@@ -72,17 +72,8 @@ function changePresText(name){
 }
 
 function rateCakes(){
-var lista = document.getElementById("rating").childNodes;
-console.log(lista);
-    for(var i = 0; i < lista.length; i++){
-        
-        console.log("inne i looen "+lista[i].textContent);
-
-        if(lista[i].id !== undefined){
-           // console.log("inne i looen "+list[i].textContent);
-           // if (list[i].textContent)
-        }
-    }
+var lista = document.getElementById("ratingApplePie").textContent;
+    console.log(lista);
 }
 /*
 <span id = "hintRecept">                
@@ -100,7 +91,7 @@ window.onload = function () {
     'use strict';
     changeImg();
     changeImgText();
-    rateCakes();
+    //rateCakes();
  
     
 };
