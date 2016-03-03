@@ -58,16 +58,11 @@ function changePresText(name){
           
     var lista = document.getElementById("tipOfDay").childNodes;
     for(var i = 0; i < lista.length; i++){
-                    console.log("innan första "+lista[i].id + " " + name)
 
         if(lista[i].id !== undefined){
-                    console.log("efter första "+lista[i].id + " " + name)
         if(lista[i].id == name){
            lista[i].style.display = 'block';
-            console.log("I andra ifsatsen");
         } else {
-                      // lista[i].style.display = 'block';
-
             lista[i].style.display = 'none';
         }
     }
