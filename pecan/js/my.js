@@ -345,6 +345,7 @@ function starHover(theStar) {
 function setSiteRating(RatingScoreResult, NumberOfRatingsResult) {
     'use strict';
     var theRScoreId = "RatingScore",//RatingScore ID
+        
         theNOfRsId = "NumberOfRatings";//NumberOfReitings ID
     if (RatingScoreResult === undefined) {
         RatingScoreResult = 1;

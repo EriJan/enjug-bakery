@@ -1,4 +1,6 @@
+
 var $;
+
 //random function
 function getRandomInt(min, max) {
     'use strict';
@@ -68,6 +70,20 @@ function changePresText(name){
     }
     }
 }
+
+function rateCakes(){
+var lista = document.getElementById("rating").childNodes;
+console.log(lista);
+    for(var i = 0; i < lista.length; i++){
+        
+        console.log("inne i looen "+lista[i].textContent);
+
+        if(lista[i].id !== undefined){
+           // console.log("inne i looen "+list[i].textContent);
+           // if (list[i].textContent)
+        }
+    }
+}
 /*
 <span id = "hintRecept">                
                     <a href="recept/pecanniklas.html">
@@ -84,6 +100,7 @@ window.onload = function () {
     'use strict';
     changeImg();
     changeImgText();
+    rateCakes();
  
     
 };
