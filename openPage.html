@@ -4,18 +4,26 @@
       <head>
           <meta charset="utf-8"/>
             <title>BakeryPage</title>
+          <link rel="stylesheet" type="text/css" href="main.css">
+          <script src="mainScript.js"></script>
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+          <script src="panncake/script.js"></script>
+          <script src="applepie/recept/script.js"></script>
+          <script src="pecan/js/my.js"></script>
     </head>
+    
     <body>
     <header>
-       <!-- Innehållet i header väntar på en mall--> 
+       <!-- Innehållet i header väntar på en mall, lägger in en tillfällig bild så länge--> 
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Mazariner1.jpg/500px-Mazariner1.jpg" alt="Två mazriner på svart bakgrund." style="width:500px;height:514px;">
         
     </header>
         <nav>
           <!-- Innehållet i nav väntar på en mall--> 
-             <a href="recept1.html">Recept på ***** </a> 
-            <a href="recept2.html">Recept på ***** </a> 
-            <a href="recept3.html">Recept på ***** </a> 
-            <a href="recept4.html">Recept på ***** </a> 
+             <a href="applepie/recept/">Äppelpaj</a> 
+            <a href="mazarin/recept.html">Mazarintårta</a> 
+            <a href="pecan/recept/">Pecanpaj</a> 
+            <a href="panncake/page-2.html">Pannkakstårta</a> 
         </nav>
       <section>
           <article>
@@ -59,7 +67,7 @@
             </p>
                 </div>
         </aside>
-        <aside id="categori">
+        <aside id="category">
             <p>Tårtor</p>
             <ol>
             <li>
@@ -80,14 +88,23 @@
         </aside>
         <aside id="rank">
         <ul>
+            <p>Topplista</p>
             <li>
+            <p id="ratingPecan">  
             <a href="pecan/index.html">Pecanpaj</a>
+                </p>
             </li>
             <li>
+            <p id="ratingApplePie"></p> 
             <a href="applepie/recept/">Äppelpaj</a>
             </li>
             <li>
+            <p id="ratingMazarin"></p>
             <a href="mazarin/recept.html">Mazarintårta</a>
+            </li>
+            <li>
+            <p id="ratingPanncake"></p>    
+            <a href="panncake/page-2.html">Pannkakstårta</a>
             </li>
             </ul>
         </aside>
