@@ -3,24 +3,25 @@
 
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        
-        <title>Glutenfri Pecannötspaj-Receptet</title>
-        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">        
+        <title>
+            Glutenfri Pecannötspaj-Receptet
+        </title>        
         <meta name="description" content="Pecannötspaj, Bakverk, Efterrätter, Söta pajer, glutenfritt">
         
-        <link rel="stylesheet" href="../css/mainrecept.css">
-        
+        <link rel="stylesheet" href="../css/main.css">        
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <script src="../js/bootstrap.min.js"></script>        
+        <script src="../js/bootstrap.js"></script>       
         
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/bootstrap.css">
 
-        <script src="./js/my.js"></script>       
+        <script src="../js/new.js"></script> 
+        <script src="../js/math.min.js"></script>
+        
     </head>
-    <body class="center">
+    <body onload="changePecanAmount(localStorage['pecanAmount']);">
         <nav class="navbar navbar-inverse">             
                 <div class="dropdown">
                     <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown">Meny
@@ -39,76 +40,55 @@
         <h2>Detta är din guide till den bästa bjudpajen någonsin!</h2>
         
         <!-- intro -->
-          
+
+        <article >
+        <!-- RATINGS 5 star -->
+        <h3>Betyg</h3>
+        <div id="rating">
+                    <span class="rate" id="1">★</span>
+                    <span class="rate" id="2">★</span>
+                    <span class="rate" id="3">★</span>
+                    <span class="rate" id="4">★</span>
+                    <span class="rate" id="5">★</span>
+        </div>
+        <div id="loading" style="display:none"><img src="../../applepie/resources/ajax-loader.gif" alt="loading"></div><span id="average"></span>
     
-    <section id = "amountCalc">
-            <p> 
-                <span id="result"></span>
-                <input type="text" value="Ange antalet pajer..." name="userInput" id="userInput" onmouseout="displayOutput()" onfocusout="displayOutput()" />
-                <input class="btn" type="submit" value="Kalkulera" onclick="displayOutput()" /> 
-                Räknar på : <span id="numberofpaj">1 paj</span>
-            </p>
-        </section>
-        
-        <!-- RATINGS 5 star hearts-->
-        <section class = "ratings">
-            <img id="startImage" alt="loading.." src="../img/loader.gif"><a id="showLoadingImage"></a>
-            Sätt betyg: 
-            <span id = "star1" class="glyphicon glyphicon-heart" 
-                         onmouseover="starHover(this)" onmouseout="starOut(this)" onmouseup="starClick(this)" onmousedown="starLight(this)" style="color:green"></span>
-            <span id = "star2" class="glyphicon glyphicon-heart" 
-                         onmouseover="starHover(this)" onmouseout="starOut(this)" onmouseup="starClick(this)" onmousedown="starLight(this)" style="color:silver"></span>
-            <span id = "star3" class="glyphicon glyphicon-heart" 
-                         onmouseover="starHover(this)" onmouseout="starOut(this)" onmouseup="starClick(this)" onmousedown="starLight(this)" style="color:silver"></span>
-            <span id = "star4" class="glyphicon glyphicon-heart" 
-                         onmouseover="starHover(this)" onmouseout="starOut(this)" onmouseup="starClick(this)" onmousedown="starLight(this)" style="color:silver"></span>
-            <span id = "star5" class="glyphicon glyphicon-heart" 
-                         onmouseover="starHover(this)" onmouseout="starOut(this)" onmouseup="starClick(this)" onmousedown="starLight(this)" style="color:silver"></span>
-             poäng: <span id = "RatingScore">0</span> 
-             (antal röster: <span id = "NumberOfRatings">0</span>st) 
-             
-        </section>
-        
-        <img id="votingImage"  alt="Send vote.." src="../img/vote.jpg"> <a id="showVotingImage"></a>
-        
-        
-        
-    <section id = "partContentListings" >
-            <div class="hideOrNot">
-                <div class="container1">
-                    <div class="leftbox">
+            <div class="hideOrNot">                    
                         <ul id="paj">
                             Pajskal
-                            <li><span id="pajSemper">2.5</span> dl Semper - fin mjölmix</li>
-                            <li><span id="pajKokosmjöl">0.5</span> dl Kokosmjöl</li>
-                            <li><span id="pajsmör">150 </span> g smör</li>
-                            <li><span id="pajsalt">0.5</span> tsk salt</li>
-                            <li><span id="pajströsocker">0.5</span> dl strösocker</li>
-                            <li><span id="pajvatten">2</span> msk vatten</li>
-                        </ul>
-                    </div>
+                            <li>5 / 2 dl Semper - fin mjölmix</li>
+                            <li>1 / 2 dl Kokosmjöl</li>
+                            <li>150 g smör</li>
+                            <li>1 / 2 tsk salt</li>
+                            <li>1 / 2 dl strösocker</li>
+                            <li>4 / 2 msk vatten</li>
+                        </ul>                   
                     
-                    <span id = small></span>
+                    <span id = small></span>                   
                     
-                    <div class="rightbox">
                         <ul id="fyllning">
                             Fyllning
                             <li><span id="fyllsemper">2</span> msk Semper - fin mjölmix</li>
                             <li><span id="fyllsmör">125</span> gr smör</li>
-                            <li><span id="fyllströsocker">1.5</span> dl strösocker</li>
-                            <li><span id="fyllsalt">0.5</span> tsk salt</li>
-                            <li><span id="fyllsirap">3</span> dl ljus sirap</li>                        <li><span id="fyllägg">2</span> ägg (lätt vispade)</li>
+                            <li><span id="fyllströsocker">3 / 2</span> dl strösocker</li>
+                            <li><span id="fyllsalt">1 / 2</span> tsk salt</li>
+                            <li><span id="fyllsirap">3</span> dl ljus sirap</li>                        
+                            <li><span id="fyllägg">2</span> ägg (lätt vispade)</li>
                             <li><span id="fyllvaniljsocker">1</span> tsk vaniljsocker</li>
                             <li><span id="pecannotter">150</span> g pecannötter</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-        </section>
+                        <input type="range" id="pecanPies" value="1" oninput="changePecanAmount(this.value)" max="10" min="1" /> 
+                 <!-- <input type="range" id="slider" />-->
+                    <p>Antal pajer <span id="numberOf">1</span> </p>  
+
+                
+            
+        </article>
             
             
-            <section id = "partContentText" >
-                <p class = "center" > 
+            <article >
+                <p> 
                     <img alt="En bild visas på en delikat paj" src="../img/pecanpaj.png" />
                 </p>
                 
@@ -128,7 +108,8 @@
                 </ol>
                 <a class="btn" href="../index.html">Tillbaka</a>
                 
-            </section>
+            </article>
+        
     <script src="../js/my.js"></script>
     </body>
     
