@@ -13,5 +13,6 @@ if(!$link){
 $db_selected = mysql_select_db(DB_NAME, $link);
 
 $value = $_POST['sname'];
+echo 'Connected successfully';
 mysql_close();
 ?>
