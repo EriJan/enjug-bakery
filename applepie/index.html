@@ -4,12 +4,11 @@
         <link rel="stylesheet" type="text/css" href="../main.css">
         <meta charset="utf-8"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-        <script src="recept.js"></script>
-        <script src="voting.js"></script>
+        <script src="/applepie/resources/script.js"></script>
         <title>Recept på Bakverk</title>
     </head>
 
-    <body>
+    <body onload="changeAmount(localStorage['pieAmount']);">
         <header>
             <h1>Knäckig äppelpaj</h1>
             <div id="headerImg">
@@ -18,7 +17,7 @@
         </header>
         <nav>
                 <a>Länken</a>
-                <a>Länktvå</a>
+                <a>Länk två</a>
         </nav>
         <section>
             <article>
@@ -30,23 +29,35 @@
                     Varianterna på äppelpaj är många, både till formen men även hur man äter den och vilka tillbehör man har. I Sverige har vi sedan urminnes ätit äppelpaj med vaniljsås eller grädde, men i övriga världen är det inte ovanligt att man har glass, ost eller med olika former av såser.
                 </p>
 
-                <p class="votingStars"><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span></p>
-                <p class="rating">Rating <strong>0</strong> of <em>0</em> votes. </p>
-                <div id="wait"></div>
+                    <p class="votingStars">
+                    <span class="rate" id="1">★</span>
+                    <span class="rate" id="2">★</span>
+                    <span class="rate" id="3">★</span>
+                    <span class="rate" id="4">★</span>
+                    <span class="rate" id="5">★</span>
+                </p>
+                 <p id="loading" style="display:none"><img src="/applepie/resources/ajax-loader.gif" alt="loading"></p>
+                <p id="average"><span id="average"></span></p>
 
             </article>
              <aside>
             <h2>Ingredienser</h2>
             <label>
                 Antal :
-                <input type = "number" id="numCakes" value="1" min="1" max="10" step="1">
+                <input id="pies" type = "number" min="1" max="10" step="1" oninput="changeAmount(this.value)"/>
             </label>
 
             <h3>Komponent 1:</h3>
             <ul>
-                <li>300 g krollsplint</li>
-                <li>200 g fett</li>
-                <li>100 g godis</li>
+                <li>Äpplen: <span class="qList"></span> st.</li>
+                <li>Smör: <span class="qList"></span> gr.</li>
+                <li>Socker: <span class="qList"></span> dl.</li>
+                <li>Havregryn: <span class="qList"></span> dl.</li>
+                <li>Mjöl: <span class="qList"></span> dl.</li>
+                <li>Bakpulver: <span class="qList"> tsk.</span></li>
+                <li>Sirap: <span class="qList"></span> dl.</li>
+                <li>Mjölk: <span class="qList"></span> msk.</li>
+                <li>Kanel</li>
             </ul>
         </aside>
             <article>
