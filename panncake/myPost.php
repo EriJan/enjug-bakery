@@ -10,9 +10,18 @@ if(!$link){
     die('Kunde inte koppla'.mysql_error());
 }
 
+echo 'Connected successfully';
+
 $db_selected = mysql_select_db(DB_NAME, $link);
 
 $value = $_POST['sname'];
-echo 'Connected successfully';
+
+$sql = "INSERT INTO studentinfo (id) VALUES ($value)";
+
+if(!mysql_query($sql)){
+    die(mysql_error);
+}
+
+
 mysql_close();
 ?>
