@@ -40,7 +40,7 @@ p {
 }
 
 body {
-    background-image: url("food/food.png");
+    background-image: url("/food/food.png");
     background-repeat: repeat;
 
 }
@@ -111,7 +111,7 @@ li {
 }
 
 .votingStars {
-    font-size:3em;
+    font-size:24px;
     text-align:center;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -133,6 +133,31 @@ li {
     margin-left: 0px;
 }
 
+.rate{
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+    text-shadow: 0px 1px 2px #000001;
+}
+
 #wait {
     text-align: center;
+}
+
+#loading {
+    font-size:1em;
+    text-align:center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+#average {
+    font-size:1em;
+    text-align:center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 0px;
+    margin-left: 0px;
 }
