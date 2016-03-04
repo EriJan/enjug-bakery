@@ -11,6 +11,7 @@ function updateVotingResult () {
             //return data;
             var rating = data.rating.toFixed(1);
             $(".rating strong").text(rating);
+            $("#ratingMazarin").text(rating);
             $(".rating em").text(data.votes);
             $("#wait").html("");
         },

@@ -345,6 +345,7 @@ function starHover(theStar) {
 function setSiteRating(RatingScoreResult, NumberOfRatingsResult) {
     'use strict';
     var theRScoreId = "RatingScore",//RatingScore ID
+        
         theNOfRsId = "NumberOfRatings";//NumberOfReitings ID
     if (RatingScoreResult === undefined) {
         RatingScoreResult = 1;
@@ -744,13 +745,13 @@ function changeClick() { //this is for the hintclicker link..
 function changeImg() { //this is for the hintclicker img..
     'use strict';
     var imagelinkTarget = document.getElementById('changingImg');
-    imagelinkTarget.src = linkToImgs[linkId];
+   // imagelinkTarget.src = linkToImgs[linkId];
     //alert("linkToImgs");
 }
 
 function changeImgText() { //this is for the hintclicker text..
     'use strict';
-    document.getElementById('imgText').innerHTML = theNames[linkId];
+  //  document.getElementById('imgText').innerHTML = theNames[linkId];
 }
 
 /*

@@ -195,6 +195,7 @@ function appendParagraf(portion){
          },
         success: function(data) {
             $("#rating").text("Pannkakstårtans betyg: "+data.rating.toFixed(2));  
+            $("#ratingPanncake").text(data.rating.toFixed(2));
             $("#votes").text("Antal röster: "+data.votes);  
           //  $(".loader").hide(); 
              console.log("I success");
