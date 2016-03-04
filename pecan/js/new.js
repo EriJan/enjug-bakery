@@ -1,8 +1,4 @@
-
-
-var averageStars;
-var alert, vote = 2, $, chrome, math;
-var quantityList = document.getElementsByClassName("qList");
+var averageStars, alert, vote = 2, $, chrome, math;
 if (localStorage.pecanAmount === null) {
     localStorage.pecanAmount = 1;
 }
@@ -33,7 +29,7 @@ function addPortions(inValue) {
 var originalSizePecanP = [5 / 2, 1 / 2, 150, 1 / 2, 1 / 2, 4 / 2];
 var originalSizePecanFyllning = [2, 125, 3 / 2, 1 / 2, 3, 2, 1, 150];
 
-function prependPannkaka(portion) {
+function prependPPaj(portion) {
     'use strict';
     $("#pancake li").each(function (index) {
         if (index < 5) {
@@ -88,11 +84,11 @@ function appendParagraf(portion) {
     $("#numberOf").append(portion);
 }
 
-function getPortions() {
+function getPortionsPecan() {
     'use strict';
     var numberOfPortions = document.getElementById("pecanPies").value;
     prependFyllning(numberOfPortions);
-    prependPannkaka(numberOfPortions);
+    prependPPaj(numberOfPortions);
     appendParagraf(numberOfPortions);
 }
 
@@ -100,7 +96,7 @@ function changePecanAmount(factor) {
     'use strict';
     document.getElementById("numberOf").innerHTML = factor;
     localStorage.pecanAmount = factor;
-	getPortions();
+	getPortionsPecan();
 }
 
 $(document).ready(function () {

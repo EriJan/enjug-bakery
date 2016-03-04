@@ -5,10 +5,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <meta charset="utf-8" />
 <title>Recept deluxe</title>
-    <link rel="stylesheet" href="../resources/iframestyle.css"/>
+    <link rel="stylesheet" href="/resources/iframestyle.css"/>
   </head>
 <body onload="changeAmount(localStorage['pieAmount']);">
-<script src="../recept/script.js"></script>
+<script src="/recept/script.js"></script>
     <main>
     <section>
         <h3>Betyg</h3>
@@ -19,7 +19,7 @@
                     <span class="rate" id="4">★</span>
                     <span class="rate" id="5">★</span>
         </div>
-        <div id="loading" style="display:none"><img src="../resources/ajax-loader.gif" alt="loading"></div><span id="average"></span>
+        <div id="loading" style="display:none"><img src="/resources/ajax-loader.gif" alt="loading"></div><span id="average"></span>
             <article>
                 <br>
                 <h3>Ingredienser</h3><br>
