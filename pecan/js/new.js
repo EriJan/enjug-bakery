@@ -1,108 +1,66 @@
-var averageStars, alert, vote = 2, $, chrome, math;
+
+        /*for (i = 0; i < maxi; i++) {
+        var v = 5
+        $("#loading").show();
+        $.ajax({
+        method: "GET",
+        url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=d7db3379c942dc44&recipe=pecanpaj&rating=" + v,
+        success: function() {
+        $("#loading").hide();
+        $("#average").getVotes();
+        }
+        });
+        }
+ */
+
+//          url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=d7db3379c942dc44&recipe=pecanpaj&rating=" + vote,
+//        url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=d7db3379c942dc44&recipe=pecanpaj",
+
+
+var vote = 0;
+var averageStars;
+var $;
+var quantityList1 = document.getElementsByClassName("q1List");
+var quantityList2 = document.getElementsByClassName("q2List");
+var isFyllning = false;
+var alert;
+
+var pecanPie = [2.5, 0.5, 150, 0.5, 0.5, 0.5, 0.5 ];
+var pecanFilling = [2, 125, 1.5, 0.5, 3, 2, 1, 150 ];
+
 if (localStorage.pecanAmount === null) {
     localStorage.pecanAmount = 1;
 }
 
-if (localStorage.votePecanCheck === null) {
-    localStorage.votePecanCheck = 0;
+if (localStorage.voteCheckPecan === null) {
+    localStorage.voteCheckPecan = 0;
 }
 
-function addPortions(inValue, addValue) {
+function autoList(factor, type) {
     'use strict';
-    math.config({
-        number: 'fraction'
-    });
-    var a = math.number(inValue * addValue), b = math.fraction(a);
-    
-    return math.format(b, {fraction: 'ratio'});
-}
-
-function addPortions(inValue) {
-    'use strict';
-    math.config({
-        number: 'fraction'
-    });
-    var a = math.number(inValue), b = math.fraction(a);
-    
-    return math.format(b, {fraction: 'ratio'});
-}
-var originalSizePecanP = [5 / 2, 1 / 2, 150, 1 / 2, 1 / 2, 4 / 2];
-var originalSizePecanFyllning = [2, 125, 3 / 2, 1 / 2, 3, 2, 1, 150];
-
-function prependPPaj(portion) {
-    'use strict';
-    $("#pancake li").each(function (index) {
-        if (index < 5) {
-            var size = originalSizePecanP[index] * portion, count = 0, i;
-            for (i = size; i >= 1; i = i - 1) {
-                count = count + 1;
-                size = size - 1;
-            }
-            var stringcount = count + " ", fraction = addPortions(size);
-            $(this).html($(this).text().replace(/\d\S\d+/g, ''));
-            $(this).html($(this).text().replace(/\d\s\d\S\d+/g, ''));
-            $(this).html($(this).text().replace(/\d+\s/g, ''));
-            if (size !== 0) {
-                $(this).prepend(fraction);
-            }
-            if (count > 0) {
-                $(this).prepend(stringcount);
-            }
+    if (type === "pecanPie") {
+        var index1 = 0, arrayLength1 = quantityList1.length;
+        for (index1 = 0; index1 < arrayLength1; index1 = index1 + 1) {
+            quantityList1[index1].innerHTML = pecanPie[index1] * factor;
         }
-    });
-}
-
-function prependFyllning(portion) {
-    'use strict';
-    $("#filling li").each(function (index) {
-        var size = originalSizePecanFyllning[index] * portion, count = 0, i;
-        for (i = size; i >= 1; i = i - 1) {
-            count = count + 1;
-            size = size - 1;
+    } else {
+        var index2 = 0, arrayLength2 = quantityList2.length;
+        for (index2 = 0; index2 < arrayLength2; index2 = index2 + 1) {
+            quantityList2[index2].innerHTML = pecanFilling[index2] * factor;
         }
-        var stringcount = count + " ";
-        var fraction = addPortions(size);
-        $(this).html($(this).text().replace(/\d\S\d+/g, ''));
-        $(this).html($(this).text().replace(/\d\s\d\S\d+/g, ''));
-        $(this).html($(this).text().replace(/\d+\s/g, ''));
-        if (size !== 0) {
-            $(this).prepend(fraction);
-        }
-        if (count > 0) {
-            $(this).prepend(stringcount);
-        }
-    });
+    }
 }
 
-
-
-
-
-function appendParagraf(portion) {
+function changeAmount(factor) {
     'use strict';
-    $("#numberOf").html($("#numberOf").text().replace(/\d/g, ''));
-    $("#numberOf").append(portion);
-}
-
-function getPortionsPecan() {
-    'use strict';
-    var numberOfPortions = document.getElementById("pecanPies").value;
-    prependFyllning(numberOfPortions);
-    prependPPaj(numberOfPortions);
-    appendParagraf(numberOfPortions);
-}
-
-function changePecanAmount(factor) {
-    'use strict';
-    document.getElementById("numberOf").innerHTML = factor;
     localStorage.pecanAmount = factor;
-	getPortionsPecan();
+    autoList(factor, "pecanPie");
+	autoList(factor, "fyllning");
 }
 
 $(document).ready(function () {
     'use strict';
-    $("#pecanPies").val(localStorage['pecanAmount']);
-    changePecanAmount(localStorage['pecanAmount']);
+    $("#pies").val(localStorage['pecanAmount']);
     $("#average").getVotes();
     $(".rate").hover(function () {
         $(this).prevAll().andSelf().css("color", "orange");
@@ -122,28 +80,15 @@ $(document).ready(function () {
         $("#" + averageStars).nextAll().css("color", "black");
         $("#" + vote).prevAll().andSelf().css("color", "orange");
     });
-    var i = 1, maxi = 100;
+    
     $(".rate").click(function () {
-        /*for (i = 0; i < maxi; i++) {
-        var v = 5
-        $("#loading").show();
-        $.ajax({
-        method: "GET",
-        url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=d7db3379c942dc44&recipe=pecanpaj&rating=" + v,
-        success: function() {
-        $("#loading").hide();
-        $("#average").getVotes();
-        }
-        });
-        }
- */
         vote = ($(this).attr("id"));
-        $("#loading").show();
+        $(".rating").show();
         $.ajax({
             method: "GET",
             url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=d7db3379c942dc44&recipe=pecanpaj&rating=" + vote,
             success: function () {
-                $("#loading").hide();
+                $(".rating").hide();
                 $("#average").getVotes();
             }
         });
