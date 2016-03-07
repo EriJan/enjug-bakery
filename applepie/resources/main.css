@@ -40,7 +40,7 @@ p {
 }
 
 body {
-    background-image: url("/food/food.png");
+    background-image: url("../../food/food.png");
     background-repeat: repeat;
 
 }
