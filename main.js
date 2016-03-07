@@ -60,7 +60,6 @@ function changePresText(name){
           
     var lista = document.getElementById("tipOfDay").childNodes;
     for(var i = 0; i < lista.length; i++){
-
         if(lista[i].id !== undefined){
         if(lista[i].id == name){
            lista[i].style.display = 'block';
