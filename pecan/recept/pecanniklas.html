@@ -1,118 +1,103 @@
 <!DOCTYPE html>
 <html>
-
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8"/>
+		<meta name="description" content="Pecannötspaj, Bakverk, Efterrätter, Söta pajer, glutenfritt">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1">  -->
         
-        <title>Glutenfri Pecannötspaj-Receptet</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="../js/bootstrap.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
         
-        <meta name="description" content="Pecannötspaj, Bakverk, Efterrätter, Söta pajer, glutenfritt">
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
         
-        <link rel="stylesheet" href="../css/mainrecept.css">
+        <script src="../js/new.js"></script>
         
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <script src="../js/bootstrap.min.js"></script>        
-        
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
-
-        <script src="./js/my.js"></script>       
+        <title>Recept på PecanPaj</title>
     </head>
-    <body class="center">
-        <nav class="navbar navbar-inverse">             
-                <div class="dropdown">
-                    <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown">Meny
-                        <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a class = "bg-warning" href="../index.html">Tillbaka</a></li>
-                        <li class = "btn btn-warning "><span class="label label-warning"><a href="pecanniklas.html">Receptet</a></span></li> 
-                    </ul>
-                </div>                
-        </nav>        
-        
+
+    <body onload="changeAmount(localStorage['pecanAmount']);">
+	
+
         <header>
-        <h1>Glutenfri Pecannötspaj inspiration av Italien</h1>
-        </header>
-        
-        <h2>Detta är din guide till den bästa bjudpajen någonsin!</h2>
-        
-        <!-- intro -->
-          
-    
-    <section id = "amountCalc">
-            <p> 
-                <span id="result"></span>
-                <input type="text" value="Ange antalet pajer..." name="userInput" id="userInput" onmouseout="displayOutput()" onfocusout="displayOutput()" />
-                <input class="btn" type="submit" value="Kalkulera" onclick="displayOutput()" /> 
-                Räknar på : <span id="numberofpaj">1 paj</span>
-            </p>
-        </section>
-        
-        <!-- RATINGS 5 star hearts-->
-        <section class = "ratings">
-            <img id="startImage" alt="loading.." src="../img/loader.gif"><a id="showLoadingImage"></a>
-            Sätt betyg: 
-            <span id = "star1" class="glyphicon glyphicon-heart" 
-                         onmouseover="starHover(this)" onmouseout="starOut(this)" onmouseup="starClick(this)" onmousedown="starLight(this)" style="color:green"></span>
-            <span id = "star2" class="glyphicon glyphicon-heart" 
-                         onmouseover="starHover(this)" onmouseout="starOut(this)" onmouseup="starClick(this)" onmousedown="starLight(this)" style="color:silver"></span>
-            <span id = "star3" class="glyphicon glyphicon-heart" 
-                         onmouseover="starHover(this)" onmouseout="starOut(this)" onmouseup="starClick(this)" onmousedown="starLight(this)" style="color:silver"></span>
-            <span id = "star4" class="glyphicon glyphicon-heart" 
-                         onmouseover="starHover(this)" onmouseout="starOut(this)" onmouseup="starClick(this)" onmousedown="starLight(this)" style="color:silver"></span>
-            <span id = "star5" class="glyphicon glyphicon-heart" 
-                         onmouseover="starHover(this)" onmouseout="starOut(this)" onmouseup="starClick(this)" onmousedown="starLight(this)" style="color:silver"></span>
-             poäng: <span id = "RatingScore">0</span> 
-             (antal röster: <span id = "NumberOfRatings">0</span>st) 
-             
-        </section>
-        
-        <img id="votingImage"  alt="Send vote.." src="../img/vote.jpg"> <a id="showVotingImage"></a>
-        
-        
-        
-    <section id = "partContentListings" >
-            <div class="hideOrNot">
-                <div class="container1">
-                    <div class="leftbox">
-                        <ul id="paj">
-                            Pajskal
-                            <li><span id="pajSemper">2.5</span> dl Semper - fin mjölmix</li>
-                            <li><span id="pajKokosmjöl">0.5</span> dl Kokosmjöl</li>
-                            <li><span id="pajsmör">150 </span> g smör</li>
-                            <li><span id="pajsalt">0.5</span> tsk salt</li>
-                            <li><span id="pajströsocker">0.5</span> dl strösocker</li>
-                            <li><span id="pajvatten">2</span> msk vatten</li>
-                        </ul>
-                    </div>
-                    
-                    <span id = small></span>
-                    
-                    <div class="rightbox">
-                        <ul id="fyllning">
-                            Fyllning
-                            <li><span id="fyllsemper">2</span> msk Semper - fin mjölmix</li>
-                            <li><span id="fyllsmör">125</span> gr smör</li>
-                            <li><span id="fyllströsocker">1.5</span> dl strösocker</li>
-                            <li><span id="fyllsalt">0.5</span> tsk salt</li>
-                            <li><span id="fyllsirap">3</span> dl ljus sirap</li>                        <li><span id="fyllägg">2</span> ägg (lätt vispade)</li>
-                            <li><span id="fyllvaniljsocker">1</span> tsk vaniljsocker</li>
-                            <li><span id="pecannotter">150</span> g pecannötter</li>
-                        </ul>
-                    </div>
-                </div>
+            <h1>Recept på bakverk.</h1>
+            <div id="headerImg">
+                <img alt="En bild visas på en delikat paj" src="../img/pecanpaj.png" width = "50%" height = "50%">
             </div>
-        </section>
-            
-            
-            <section id = "partContentText" >
-                <p class = "center" > 
-                    <img alt="En bild visas på en delikat paj" src="../img/pecanpaj.png" />
+        </header>
+        	<nav>
+        <div class="dropdown">
+            <button class="btn btn-warning dropdown-toggle left" type="button" data-toggle="dropdown">Meny
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a class = "bg-warning " href="../index.html">Tillbaka</a></li>
+                <li class = "btn-warning "><a href="pecanniklas.html">Receptet</a></li>
+            </ul>
+        </div>
+    </nav> 
+		
+
+        <section>
+            <article>
+                <h2> Sagan om Pecankakan</h2>
+                <p>    
+                    v&auml;lkommen till Pecann&ouml;tspajens paradis! <br />
+                    Det hela b&ouml;rjade med att jag skulle bjuda p&aring; ett bakverk
+                    Det var viktigt att detta skulle k&auml;nnas som att jag hade lagt ned <em>hela</em> 
+                    min sj&auml;l i detta men &auml;nd&aring; hinna med mina &ouml;vriga bestyr
+                    och dessutom skulle den vara glutenfri..<br />
+                    Efter mycket letande och j&auml;mf&ouml;rande av olika recept skapade jag ett som skulle passa,
                 </p>
+                <ul style="list-style-type:disc">                    
+                <li>Mums, det var den b&auml;sta jag smakat! utbrast en efter en!</li>
+                </ul>
+				
+				<!-- RATINGS 5 star -->
+                <p class="votingStars">
+                    <span class="rate" id="1">★</span>
+                    <span class="rate" id="2">★</span>
+                    <span class="rate" id="3">★</span>
+                    <span class="rate" id="4">★</span>
+                    <span class="rate" id="5">★</span>
+                </p>
+                 <p id="loading" style="display:none"><img src="../../applepie/resources/ajax-loader.gif" alt="loading"></p>
+                <p id="average"><span id="average"></span></p>
+
+            </article>            
+            <aside>
+                <h2>Ingredienser</h2>
+                <label>
+                    Antal pajer :
+					<input id="pies" type = "number" min="1" max="10" step="1" 
+					oninput="changeAmount(this.value)"/>  
+                </label>
+
+                <ul id="paj">
+                            Pajskal
+                            <li><span class="q1List"></span> dl Semper - fin mjölmix</li>
+                            <li><span class="q1List"></span> dl Kokosmjöl</li>
+                            <li><span class="q1List"></span> g smör</li>
+                            <li><span class="q1List"></span> tsk salt</li>
+                            <li><span class="q1List"></span> dl strösocker</li>
+                            <li><span class="q1List"></span> msk vatten</li>
+                        </ul>  
                 
-                <ol>
+                <ul id="fyllning">
+                    Fyllning
+                    <li><span class="q2List"></span> msk Semper - fin mjölmix</li>
+                    <li><span class="q2List"></span> gr smör</li>
+                    <li><span class="q2List"></span> dl strösocker</li>
+                    <li><span class="q2List"></span> tsk salt</li>
+                    <li><span class="q2List"></span> dl ljus sirap</li>
+                    <li><span class="q2List"></span> ägg (lätt vispade)</li>
+                    <li><span class="q2List"></span> tsk vaniljsocker</li>
+                    <li><span class="q2List"></span> g pecannötter</li>
+                </ul>
+            </aside>
+            
+            <article>
+                <h3> Så här lagar du bakverket:</h3>
+                
                     <li>S&auml;tt ugnen p&aring; 200 grader.</li>
                     <li>Koka upp sm&ouml;r, socker, sirap, mj&ouml;lsorterna, och salt och <br/>
                         l&aring;t det sjuda i tre minuter underomr&ouml;rning.</li>
@@ -124,15 +109,8 @@
                     <li>Blanda sedan i n&ouml;tter, vaniljpulver och de l&auml;ttvispade &auml;ggen i kolasmeten.</li>
                     <li>H&auml;ll fyllningen i pajskalet och gr&auml;dda pajen 35-40 minuter i 175 grader.</li>
                     <li>L&aring;t st&aring; kallt, g&auml;rna &ouml;ver natten.&nbsp;</li>
-                    <li>Valfritt: Servera ev med vispad gr&auml;dde/glass.</li>
-                </ol>
-                <a class="btn" href="../index.html">Tillbaka</a>
-                
-            </section>
-    <script src="../js/my.js"></script>
-    </body>
-    
-
-
+                    <li>Valfritt: Servera ev med vispad gr&auml;dde/glass.</li>                
+            </article>
+        </section>
+      </body>
 </html>
-
