@@ -120,10 +120,10 @@ var originalSizePannkaka = [1, 1/3, 2/3, 1/3, 1/3];
 var originalSizeFyllning = [4/5, 1, 1, 1/2, 2/3];
 
 function getPortions (){ 
-    if(document.getElementById("slider") == null){
+    if(document.getElementById("numCakes") == null){
         numberOfPortions = localStorage.getItem("numberOfPortions");
     } else {
-    numberOfPortions = document.getElementById("slider").value;
+    numberOfPortions = document.getElementById("numCakes").value;
     }
 
     prependFyllning(numberOfPortions);
