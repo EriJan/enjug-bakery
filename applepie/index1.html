@@ -20,14 +20,13 @@
     </head>
 
     <body onload="changeAmount(localStorage['pieAmount']);">
-                <header>
+        <header>
             <h1>Knäckig äppelpaj</h1>
             <div id="headerImg">
                 <img src="./resources/paj.jpg" width = "539" height = "422" alt="delicious pie">
             </div>
-        </header>
         <nav>
-            <div class="dropdown">
+        <div class="dropdown">
             <button class="btn btn-warning dropdown-toggle left" type="button" data-toggle="dropdown">Meny
                 <span class="caret"></span></button>
             <ul class="dropdown-menu">
@@ -70,7 +69,8 @@
             </ul>
         </div>
     </nav>        
-        
+        </header>
+
         <section>
             <article>
                 <h2> Historik kring äppelpaj</h2>
@@ -88,8 +88,10 @@
                     <span class="rate" id="4">★</span>
                     <span class="rate" id="5">★</span>
                 </p>
+
                  <p id="loading" style="display:none"><img src="./resources/ajax-loader.gif" alt="loading"></p>
                 <p id="average"></p>
+
 
             </article>
              <aside>
