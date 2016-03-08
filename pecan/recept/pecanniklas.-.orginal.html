@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <title>Glutenfri Pecannötspaj-Receptet</title>
+        
+        <meta name="description" content="Pecannötspaj, Bakverk, Efterrätter, Söta pajer, glutenfritt">
+        
+        <link rel="stylesheet" href="../css/mainrecept.css">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>        
+        
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+        <script src="./js/my.js"></script>       
+    </head>
+    <body class="center">
+        <nav class="navbar navbar-inverse">             
+                <div class="dropdown">
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown">Meny
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a class = "bg-warning" href="../index.html">Tillbaka</a></li>
+                        <li class = "btn btn-warning "><span class="label label-warning"><a href="pecanniklas.html">Receptet</a></span></li> 
+                    </ul>
+                </div>                
+        </nav>        
+        
+        <header>
+        <h1>Glutenfri Pecannötspaj inspiration av Italien</h1>
+        </header>
+        
+        <h2>Detta är din guide till den bästa bjudpajen någonsin!</h2>
+        
+        <!-- intro -->
+          
+    
+    <section id = "amountCalc">
+            <p> 
+                <span id="result"></span>
+                <input type="text" value="Ange antalet pajer..." name="userInput" id="userInput" onmouseout="displayOutput()" onfocusout="displayOutput()" />
+                <input class="btn" type="submit" value="Kalkulera" onclick="displayOutput()" /> 
+                Räknar på : <span id="numberofpaj">1 paj</span>
+            </p>
+        </section>
+        
+        <!-- RATINGS 5 star hearts-->
+        <section class = "ratings">
+            <img id="startImage" alt="loading.." src="../img/loader.gif"><a id="showLoadingImage"></a>
+            Sätt betyg: 
+            <span id = "star1" class="glyphicon glyphicon-heart" 
+                         onmouseover="starHover(this)" onmouseout="starOut(this)" onmouseup="starClick(this)" onmousedown="starLight(this)" style="color:green"></span>
+            <span id = "star2" class="glyphicon glyphicon-heart" 
+                         onmouseover="starHover(this)" onmouseout="starOut(this)" onmouseup="starClick(this)" onmousedown="starLight(this)" style="color:silver"></span>
+            <span id = "star3" class="glyphicon glyphicon-heart" 
+                         onmouseover="starHover(this)" onmouseout="starOut(this)" onmouseup="starClick(this)" onmousedown="starLight(this)" style="color:silver"></span>
+            <span id = "star4" class="glyphicon glyphicon-heart" 
+                         onmouseover="starHover(this)" onmouseout="starOut(this)" onmouseup="starClick(this)" onmousedown="starLight(this)" style="color:silver"></span>
+            <span id = "star5" class="glyphicon glyphicon-heart" 
+                         onmouseover="starHover(this)" onmouseout="starOut(this)" onmouseup="starClick(this)" onmousedown="starLight(this)" style="color:silver"></span>
+             poäng: <span id = "RatingScore">0</span> 
+             (antal röster: <span id = "NumberOfRatings">0</span>st) 
+             
+        </section>
+        
+        <img id="votingImage"  alt="Send vote.." src="../img/vote.jpg"> <a id="showVotingImage"></a>
+        
+        
+        
+    <section id = "partContentListings" >
+            <div class="hideOrNot">
+                <div class="container1">
+                    <div class="leftbox">
+                        <ul id="paj">
+                            Pajskal
+                            <li><span id="pajSemper">2.5</span> dl Semper - fin mjölmix</li>
+                            <li><span id="pajKokosmjöl">0.5</span> dl Kokosmjöl</li>
+                            <li><span id="pajsmör">150 </span> g smör</li>
+                            <li><span id="pajsalt">0.5</span> tsk salt</li>
+                            <li><span id="pajströsocker">0.5</span> dl strösocker</li>
+                            <li><span id="pajvatten">2</span> msk vatten</li>
+                        </ul>
+                    </div>
+                    
+                    <span id = small></span>
+                    
+                    <div class="rightbox">
+                        <ul id="fyllning">
+                            Fyllning
+                            <li><span id="fyllsemper">2</span> msk Semper - fin mjölmix</li>
+                            <li><span id="fyllsmör">125</span> gr smör</li>
+                            <li><span id="fyllströsocker">1.5</span> dl strösocker</li>
+                            <li><span id="fyllsalt">0.5</span> tsk salt</li>
+                            <li><span id="fyllsirap">3</span> dl ljus sirap</li>                        <li><span id="fyllägg">2</span> ägg (lätt vispade)</li>
+                            <li><span id="fyllvaniljsocker">1</span> tsk vaniljsocker</li>
+                            <li><span id="pecannotter">150</span> g pecannötter</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+            
+            
+            <section id = "partContentText" >
+                <p class = "center" > 
+                    <img alt="En bild visas på en delikat paj" src="../img/pecanpaj.png" />
+                </p>
+                
+                <ol>
+                    <li>S&auml;tt ugnen p&aring; 200 grader.</li>
+                    <li>Koka upp sm&ouml;r, socker, sirap, mj&ouml;lsorterna, och salt och <br/>
+                        l&aring;t det sjuda i tre minuter underomr&ouml;rning.</li>
+                    <li>Tag av fr&aring;n v&auml;rmen och l&aring;t fyllningen svalna till rumstemperatur
+                    </li>
+                    <li>Under tiden smeten svalnar blanda ihop alla ingredienser till pajdegen och tryck ut i en pajform.<br/>
+                    (Eller de antalet ni anget)</li>
+                    <li>F&ouml;rgr&auml;dda pajskalet tio minuter i 200 grader.</li>
+                    <li>Blanda sedan i n&ouml;tter, vaniljpulver och de l&auml;ttvispade &auml;ggen i kolasmeten.</li>
+                    <li>H&auml;ll fyllningen i pajskalet och gr&auml;dda pajen 35-40 minuter i 175 grader.</li>
+                    <li>L&aring;t st&aring; kallt, g&auml;rna &ouml;ver natten.&nbsp;</li>
+                    <li>Valfritt: Servera ev med vispad gr&auml;dde/glass.</li>
+                </ol>
+                <a class="btn" href="../index.html">Tillbaka</a>
+                
+            </section>
+    <script src="../js/my.js"></script>
+    </body>
+    
+
+
+</html>
+
