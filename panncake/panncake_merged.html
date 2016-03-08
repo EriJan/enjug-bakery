@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="../main.css">
         <meta charset="utf-8"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-        <script src="recept.js"></script>
-        <script src="voting.js"></script>
+        <script src="../pecan/js/bootstrap.js"></script>
+		<link rel="stylesheet" type="text/css" href="../pecan/css/bootstrap.css">
+        
+        <link rel="stylesheet" type="text/css" href="../pecan/css/main.css">
+        
+        <script src="script.js"></script>
+       <script src="voting.js"></script>
         <script src="math.min.js"></script>
 
         <title> Pannkakstårtan från Kanal</title>
@@ -18,10 +22,52 @@
                 <img src="kanal.jpg" alt="Bild på hus och en åker.">
             </div>
         </header>
+        
         <nav>
-                <a>Länken</a>
-                <a>Länktvå</a>
-        </nav>
+        <div class="dropdown">
+            <button class="btn btn-warning dropdown-toggle left" type="button" data-toggle="dropdown">Meny
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class = "btn-info" href="../Index.html">
+                        Hem
+                    </a>
+                </li>
+                <li>
+                    <a class = "btn-warning " href="../applepie/index.html">
+                        Äppelpaj
+                    </a>
+                </li>
+                <li>
+                    <a class = "btn-warning " href="../mazarin/recept.html">
+                        Mazarintårta
+                    </a>
+                </li>
+                <li>
+                    <a class = "btn-warning " href="../pecan/recept/pecanniklas.html">
+                        Pecanpaj
+                    </a>
+                </li>
+                <li>
+                    <a class = "active " href="">
+                        Pannkakstårta
+                    </a>
+                </li>
+                <li>
+                    <a class = "btn-success " href="../tips.html">
+                        Allmäna råd om bakning
+                    </a>
+                </li>
+                <li>
+                    <a class = "btn-danger " href="../Kontakta%20oss.html">
+                        Kontakt
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+        
         <section>
             <article>
                 <h2>Stöllvetesbidragö</h2>
@@ -53,11 +99,11 @@
             <h2>Ingredienser</h2>
             <label>
                 Antal :
-                <input type = "number" id="numCakes" value="1" min="1" max="10" step="1">
+                <input type = "number" id="numCakes" oninput="getPortions()" value="1" min="1" max="10" step="1">
             </label>
 
             <h3>Ingredienser pannkaka:</h3>
-            <ul>
+            <ul id="pancake">
                 <li>1 ägg</li>
                 <li>1/3  dl mjöl</li>
                 <li>2/3  dl mjölk</li>
@@ -66,7 +112,7 @@
                 <li> Smör till stekning </li>
             </ul>
             <h3>Ingredienser fyllning:</h3>
-            <ul>
+            <ul id="filling">
                 <li>4/5 dl Grädde</li>
                 <li>1 msk Smör</li>
                 <li>1 tsk Kanel</li>

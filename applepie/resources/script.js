@@ -8,7 +8,6 @@ var applePie = {
     Sirap:0.5,
     Mjölk:2
 };
-
 var vote = 0;
 var averageStars;
 var quantityList = document.getElementsByClassName("qList");
@@ -30,7 +29,6 @@ function autoList(factor){
 
 function changeAmount(factor)
 {
-	document.getElementById("amount").innerHTML=factor;
     localStorage.pieAmount = factor;
     autoList(factor);
 }
@@ -59,12 +57,12 @@ $(document).ready(function(){
     
     $(".rate").click(function(){
         vote = ($(this).attr("id"));
-        $("#loading").show();
+        $(".rating").show();
         $.ajax({
             method: "GET",
             url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=d7607304c8de1b93&recipe=applepiemarcus&rating=" + vote,
             success: function() {
-                $("#loading").hide();
+                $(".rating").hide();
                 $("#average").getVotes();
                 
             }

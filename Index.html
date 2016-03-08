@@ -3,29 +3,72 @@
 
       <head>
           <meta charset="utf-8"/>
-            <title>BakeryPage</title>
-          <link rel="stylesheet" type="text/css" href="main.css">
-          <script src="main.js"></script>
+          <title>BakeryPage</title>
+          
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="./pecan/js/bootstrap.js"></script>
+		<link rel="stylesheet" type="text/css" href="./pecan/css/bootstrap.css">
+        
+        <link rel="stylesheet" type="text/css" href="./pecan/css/main.css">
+
+                  
+        <script src="main.js"></script>
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-          <script src="panncake/script.js"></script>
-          <script src="applepie/recept/script.js"></script>
-          <script src="mazarin/voting.js"></script>
-        <!-- <script src="pecan/js/my.js"></script> -->
+           <script src="panncake/script.js"></script>
+        <script src="applepie/recept/script.js"></script>
+         <script src="mazarin/voting.js"></script>
+         <script src="pecan/js/new.js"></script> 
     </head>
     
     <body>
     <header>
-       <!-- Innehållet i header väntar på en mall, lägger in en tillfällig bild så länge--> 
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Mazariner1.jpg/500px-Mazariner1.jpg" alt="Två mazriner på svart bakgrund." style="width:500px;height:514px;">
+          <img src="startImg.png" alt="En tecknad figur med kockmössa håller upp en tårta." style="width:25%;height:25%;">
         
-    </header>
+    </header>        
         <nav>
-          <!-- Innehållet i nav väntar på en mall--> 
-             <a href="applepie/recept/">Äppelpaj</a> 
-            <a href="mazarin/recept.html">Mazarintårta</a> 
-            <a href="pecan/recept/">Pecanpaj</a> 
-            <a href="panncake/page-2.html">Pannkakstårta</a> 
-        </nav>
+        <div class="dropdown">
+            <button class="btn btn-warning dropdown-toggle left" type="button" data-toggle="dropdown">Meny
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class = "active" href="">
+                        Hem
+                    </a>
+                </li>
+                <li>
+                    <a class = "btn-warning " href="./applepie/index.html">
+                        Äppelpaj
+                    </a>
+                </li>
+                <li>
+                    <a class = "btn-warning " href="./mazarin/recept.html">
+                        Mazarintårta
+                    </a>
+                </li>
+                <li>
+                    <a class = "btn-warning " href="./pecan/recept/pecanniklas.html">
+                        Pecanpaj
+                    </a>
+                </li>
+                <li>
+                    <a class = "btn-warning " href="./panncake/panncake_merged.html">
+                        Pannkakstårta
+                    </a>
+                </li>
+                <li>
+                    <a class = "btn-success " href="./tips.html">
+                        Allmäna råd om bakning
+                    </a>
+                </li>
+                <li>
+                    <a class = "btn-danger " href="Kontakta%20oss.html">
+                        Kontakt
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav> 
       <section>
           <article>
         <h1>
@@ -38,18 +81,20 @@
         </article>
         </section> 
          <section id = "partContentImage" >  
+             <article>
              <h2>
             Veckans tips!
          </h2>
             <p>
             <br>Nu vill vi rekommendera: 
-                <span id='imgText'>Bakmums</span>!
+                <span id='imgText'>Bakmums</span>!<br/>
                
                 <a href='#' onclick='changeClick()'>
                     <img src="pecan/img/img1.png" alt="En bild visas på en delikat paj" id = "changingImg" />
                 </a>   
                 
             </p>
+                 </article>
         <aside id="tipOfDay">
        
            <div id="Pankakstårta">
@@ -87,9 +132,9 @@
             <p>Tårtor</p>
             <ul>
             <li>
-                <a href="mazarin/recept.html">Mazarintårta</a> </li>
+                <a href="./mazarin/recept.html">Mazarintårta</a> </li>
                <li>
-                <a href="panncake/page-2.html">Pannkakstårta</a>
+                <a href="panncake/panncake_merged.html">Pannkakstårta</a>
             </li>
             </ul>
             
@@ -108,21 +153,21 @@
             </h2>
         <ul id="rating">
             <li>
-            <p id="ratingPecan">    </p>
-            <a href="pecan/index.html">Pecanpaj</a>
+            <p id="ratingPecan"> </p>
+            <a href="./pecan/recept/pecanniklas.html">Pecanpaj</a>
               
             </li>
             <li>
             <p id="ratingApplePie"></p> 
-            <a href="applepie/recept/">Äppelpaj</a>
+            <a href="./applepie/index.html">Äppelpaj</a>
             </li>
             <li>
             <p id="ratingMazarin"></p>
-            <a href="mazarin/recept.html">Mazarintårta</a>
+            <a href="./mazarin/recept.html">Mazarintårta</a>
             </li>
             <li>
             <p id="ratingPanncake"></p>    
-            <a href="panncake/page-2.html">Pannkakstårta</a>
+            <a href="./panncake/panncake_merged.html">Pannkakstårta</a>
             </li>
             </ul>
         </aside>

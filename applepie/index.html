@@ -1,29 +1,123 @@
 <!DOCTYPE html>
-
-<!-- Så här kommenterar man -->
 <html>
-<head>
-<meta charset="utf-8" />
-<title>Bakverkssida deluxe</title>
-    <link rel="stylesheet" href="../main.css"/>
-</head>
-<body>
-    <script src="script.js"></script>
-    <header class="topHeader">
-    <h1>Knäckig äppelpaj.</h1>
-    <p>en klassiker!</p>
-    </header>
-    
-    <nav>
-    <ul>
-    <li><a href="/info/info.html" target="mainFrame">info</a></li>
-    <li><a href="/recept/index.html" target="mainFrame">recept</a></li>
-    </ul>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="./resources/main.css">        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="../pecan/js/bootstrap.js"></script>
+		<link rel="stylesheet" type="text/css" href="../pecan/css/bootstrap.css">
+        
+        <link rel="stylesheet" type="text/css" href="../pecan/css/main.css">
+                
+        <script src="./resources/script.js"></script>
+        <title>Recept på Bakverk</title>
+    </head>
+
+    <body onload="changeAmount(localStorage['pieAmount']);">
+        <header>
+            <h1>Knäckig äppelpaj</h1>
+            <div id="headerImg">
+                <img src="./resources/paj.jpg" width = "539" height = "422" alt="delicious pie">
+            </div>
+        </header>
+        <nav>
+        <div class="dropdown">
+            <button class="btn btn-warning dropdown-toggle left" type="button" data-toggle="dropdown">Meny
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class = "btn-info" href="../Index.html">
+                        Hem
+                    </a>
+                </li>
+                <li>
+                    <a class = "active" href="">
+                        Äppelpaj
+                    </a>
+                </li>
+                <li>
+                    <a class = "btn-warning " href="../mazarin/recept.html">
+                        Mazarintårta
+                    </a>
+                </li>
+                <li>
+                    <a class = "btn-warning " href="../pecan/recept/pecanniklas.html">
+                        Pecanpaj
+                    </a>
+                </li>
+                <li>
+                    <a class = "btn-warning " href="../panncake/panncake_merged.html">
+                        Pannkakstårta
+                    </a>
+                </li>
+                <li>
+                    <a class = "btn-success " href="../tips.html">
+                        Allmäna råd om bakning
+                    </a>
+                </li>
+                <li>
+                    <a class = "btn-danger " href="../Kontakta%20oss.html">
+                        Kontakt
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
     </nav>
-<iframe src="/info/info.html" name="mainFrame"></iframe>
-    <footer>
-    <a href="/showtime/index.html"> <img src="/resources/skelly.gif" alt="skeletor rocks!" width="50"></a>
-        <p>hail skeletor!</p>
-    </footer>
-    </body>
+        <section>
+            <article>
+                <h2> Historik kring äppelpaj</h2>
+                <p>
+                    Äppelpaj har kunnat spåras ända tillbaka till runt 1500 talet då man funnit recept på äppelpaj eller varianter av äppelpaj i Europa, bland annat i England och Holland. Äppelpaj har i många delar av världen varit en efterrätt eller serverats som bakelse till exempelvis kaffe eller te.
+                </p>
+                <p>
+                    Varianterna på äppelpaj är många, både till formen men även hur man äter den och vilka tillbehör man har. I Sverige har vi sedan urminnes ätit äppelpaj med vaniljsås eller grädde, men i övriga världen är det inte ovanligt att man har glass, ost eller med olika former av såser.
+                </p>
+
+                    <p class="votingStars">
+                    <span class="rate" id="1">★</span>
+                    <span class="rate" id="2">★</span>
+                    <span class="rate" id="3">★</span>
+                    <span class="rate" id="4">★</span>
+                    <span class="rate" id="5">★</span>
+                </p>
+                 <p id="loading" style="display:none"><img src="./resources/ajax-loader.gif" alt="loading"></p>
+                <p id="average"></p>
+
+            </article>
+             <aside>
+            <h2>Ingredienser</h2>
+            <label>
+                Antal :
+                <input id="pies" type = "number" min="1" max="10" step="1" oninput="changeAmount(this.value)"/>
+            </label>
+
+            <h3>Komponent 1:</h3>
+            <ul>
+                <li>Äpplen: <span class="qList"></span> st.</li>
+                <li>Smör: <span class="qList"></span> gr.</li>
+                <li>Socker: <span class="qList"></span> dl.</li>
+                <li>Havregryn: <span class="qList"></span> dl.</li>
+                <li>Mjöl: <span class="qList"></span> dl.</li>
+                <li>Bakpulver: <span class="qList"> tsk.</span></li>
+                <li>Sirap: <span class="qList"></span> dl.</li>
+                <li>Mjölk: <span class="qList"></span> msk.</li>
+                <li>Kanel</li>
+            </ul>
+        </aside>
+            <article>
+                <h3> Så här lagar du bakverket:</h3>
+                <ol>
+                    <li>Sätt ugnen på 175 grader.</li>
+                    <li>Skala äpplena och ta ur kärnorna.</li>
+                    <li>Smörj formen med smör och skiva sedan äpplena i lagom tjocklek.</li>
+                    <li>Smält smöret i en kastrull och rör ner mjölk och sirap.</li>
+                    <li>Blanda havregryn, mjöl, bakpulver och socker i en skål och häll sedan över det smälta smöret och blanda alltihop.</li>
+                    <li>Lägg äppelskivorna i botten på den smorda formen och täck sedan alltihop med blandningen från skålen.</li>
+                    <li>Strö kanel över pajen enligt egen smak och tycke.</li>
+                    <li>Grädda pajen i mitten av ugnen i ca 30 minuter.</li>
+                </ol>
+            </article>
+        </section>
+      </body>
 </html>
