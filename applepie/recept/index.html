@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<meta charset="utf-8" />
+<title>Recept deluxe</title>
+    <link rel="stylesheet" href="/resources/iframestyle.css"/>
+  </head>
+<body onload="changeAmount(localStorage['pieAmount']);">
+<script src="/recept/script.js"></script>
+    <main>
+    <section>
+        <h3>Betyg</h3>
+        <div id="rating">
+                    <span class="rate" id="1">★</span>
+                    <span class="rate" id="2">★</span>
+                    <span class="rate" id="3">★</span>
+                    <span class="rate" id="4">★</span>
+                    <span class="rate" id="5">★</span>
+        </div>
+        <div id="loading" style="display:none"><img src="/resources/ajax-loader.gif" alt="loading"></div><span id="average"></span>
+            <article>
+                <br>
+                <h3>Ingredienser</h3><br>
+                <p>Äpplen: <span class="qList"></span> st.</p>
+                <p>Smör: <span class="qList"></span> gr.</p>
+                <p>Socker: <span class="qList"></span> dl.</p>
+                <p>Havregryn: <span class="qList"></span> dl.</p>
+                <p>Mjöl: <span class="qList"></span> dl.</p>
+                <p>Bakpulver: <span class="qList"></span> tsk.</p>
+                <p>Sirap: <span class="qList"></span> dl.</p>
+                <p>Mjölk: <span class="qList"></span> msk.</p>
+                <p>Lagom med kanel.</p>
+            </article>
+        <input id="pies" type="range" min="1" max="5" oninput="changeAmount(this.value)"/>
+        <p>Antal pajer: <span id="amount">1</span></p>
+         
+        <br>
+        <article>
+            <h3>Instruktioner</h3><br>
+            <p>Sätt ugnen på 175 grader.</p>
+            <p>Skala äpplena och ta ur kärnorna.</p>
+            <p>Smörj formen med smör och skiva sedan äpplena i lagom tjocklek.</p>
+            <p>Smält smöret i en kastrull och rör ner mjölk och sirap.</p>
+            <p>Blanda havregryn, mjöl, bakpulver och socker i en skål och häll sedan över det smälta smöret och blanda alltihop.</p>
+            <p>Lägg äppelskivorna i botten på den smorda formen och täck sedan alltihop med blandningen från skålen.</p>
+            <p>Strö kanel över pajen enligt egen smak och tycke.</p>
+            <p>Grädda pajen i mitten av ugnen i ca 30 minuter.</p>
+        
+        </article>
+        </section>            
+</main> 
+
+    
+</body>
+</html>
