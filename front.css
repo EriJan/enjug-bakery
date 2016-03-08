@@ -59,7 +59,7 @@ nav {
     float: none;
     text-align:center;
     padding-left: 0%;
-    padding-right: 5%;
+    padding-right: 0%;
 }
 
 nav h3 {
@@ -79,16 +79,8 @@ article h3 {
     padding:3px;
 }
 
-article:first-child {
-    float: left;
-    width: 90%;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
 article {
     float: left;
-    width: 60%;
     padding-left: 5%;
     padding-right: 5%;
 }
@@ -100,46 +92,34 @@ aside {
     padding-bottom: 5%;
 }
 
+ul{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 aside h2 {
     font-size:1.5em;
     text-align:left;
     padding:0px;
 }
 
-aside h3 {
+aside h80
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 li {
+    
     margin-top: 5px;
     margin-bottom: 5px;
     list-style-position: inside;
 }
 
-.votingStars {
-    font-size:3em;
-    text-align:center;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-right: 0px;
-    margin-left: 0px;
-
-}
-
-.votingStars span {
-    cursor: pointer;
-}
-
-.rating {
-    font-size:1em;
-    text-align:center;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-right: 0px;
-    margin-left: 0px;
-}
-
-#wait {
-    text-align: center;
+.box {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1366px;
 }
