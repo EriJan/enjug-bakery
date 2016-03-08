@@ -3,28 +3,72 @@
 
       <head>
           <meta charset="utf-8"/>
-            <title>BakeryPage</title>
-          <link rel="stylesheet" type="text/css" href="front.css">
-          <script src="main.js"></script>
+          <title>BakeryPage</title>
+          
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="./pecan/js/bootstrap.js"></script>
+		<link rel="stylesheet" type="text/css" href="./pecan/css/bootstrap.css">
+        
+        <link rel="stylesheet" type="text/css" href="./pecan/css/main.css">
+
+                  
+        <script src="main.js"></script>
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-          <script src="panncake/script.js"></script>
-          <script src="applepie/recept/script.js"></script>
-          <script src="mazarin/voting.js"></script>
-        <!-- <script src="pecan/js/my.js"></script> -->
+           <script src="panncake/script.js"></script>
+        <script src="applepie/recept/script.js"></script>
+         <script src="mazarin/voting.js"></script>
+         <script src="pecan/js/new.js"></script> 
     </head>
     
     <body>
     <header>
-          <img src="startImg.png" alt="En tecknad figur med kockmössa håller upp en tårta." style="width:500px;height:514px;">
-    </header>
+          <img src="startImg.png" alt="En tecknad figur med kockmössa håller upp en tårta." style="width:25%;height:25%;">
+        
+    </header>        
         <nav>
-             <a href="applepie/index.html">Äppelpaj</a> 
-            <a href="mazarin/sammanfogad.html">Mazarintårta</a> 
-            <a href="pecan/recept/pecanniklas.html">Pecanpaj</a> 
-            <a href="panncake/panncake_merged.html">Pannkakstårta</a> 
-            <a href="tips.html">Allmäna råd om bakning</a>
-            <a href="Kontakta%20oss.html">Kontakt</a>
-        </nav>
+        <div class="dropdown">
+            <button class="btn btn-warning dropdown-toggle left" type="button" data-toggle="dropdown">Meny
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class = "active" href="">
+                        Hem
+                    </a>
+                </li>
+                <li>
+                    <a class = "btn-warning " href="./applepie/index.html">
+                        Äppelpaj
+                    </a>
+                </li>
+                <li>
+                    <a class = "btn-warning " href="./mazarin/recept.html">
+                        Mazarintårta
+                    </a>
+                </li>
+                <li>
+                    <a class = "btn-warning " href="./pecan/recept/pecanniklas.html">
+                        Pecanpaj
+                    </a>
+                </li>
+                <li>
+                    <a class = "btn-warning " href="./panncake/panncake_merged.html">
+                        Pannkakstårta
+                    </a>
+                </li>
+                <li>
+                    <a class = "btn-success " href="./tips.html">
+                        Allmäna råd om bakning
+                    </a>
+                </li>
+                <li>
+                    <a class = "btn-danger " href="Kontakta%20oss.html">
+                        Kontakt
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav> 
       <section>
           <article>
         <h1>
@@ -32,21 +76,25 @@
         </h1>
         <p>
             Våra recept förgyller det du har i köksskåpet! <br>
-            Här hittar du något för alla tillfällen och alla smaker. Så - följ recepten, sätt på kaffepannan eller stick sugröret i saftglaset och kör sedan igång med kalaset!
+            Här hittar du något för alla tillfällen och alla samker. Så - följ recepten, sätt på kaffepannan eller stick sugröret i saftglaset och kör sedan igång med kalaset!
         </p>
         </article>
         </section> 
          <section id = "partContentImage" >  
+             <article>
              <h2>
             Veckans tips!
          </h2>
-            <p class="rating">
+            <p>
+            <br>Nu vill vi rekommendera: 
+                <span id='imgText'>Bakmums</span>!<br/>
+               
                 <a href='#' onclick='changeClick()'>
                     <img src="pecan/img/img1.png" alt="En bild visas på en delikat paj" id = "changingImg" />
                 </a>   
-                <br>Nu vill vi rekommendera: 
-                <span id='imgText'>Bakmums</span>!
+                
             </p>
+                 </article>
         <aside id="tipOfDay">
        
            <div id="Pankakstårta">
@@ -70,7 +118,7 @@
             
             </div>  
             <div id="Pecanpaj">
-              <h3>Pecanpaj</h3>
+              <h3>Pecakpaj</h3>
             <p>
             Dagens tips är riktig en uppstickare, lika frisk och läcker som ett det allra mildaste och mest förföriska av medelhavets alla havsbris. Ingen kan motstå en skärva av detta bakverk, det vore att neka sig själva livet. Nej- ät och njut och glöm alla sorger.
             </p>
@@ -84,16 +132,16 @@
             <p>Tårtor</p>
             <ul>
             <li>
-                <a href="mazarin/recept.html">Mazarintårta</a> </li>
+                <a href="./mazarin/recept.html">Mazarintårta</a> </li>
                <li>
-                <a href="panncake/page-2.html">Pannkakstårta</a>
+                <a href="panncake/panncake_merged.html">Pannkakstårta</a>
             </li>
             </ul>
             
             <p>Pajer</p>
             <ul>
             <li>
-                <a href="applepie/index.html">Äppelpaj</a></li>
+                <a href="applepie/recept/">Äppelpaj</a></li>
                <li>
                 <a href="pecan/index.html">Pecanpaj</a>
             </li>
@@ -106,25 +154,26 @@
         <ul id="rating">
             <li>
             <p id="ratingPecan"> </p>
-            <a href="pecan/index.html">Pecanpaj</a>
+            <a href="./pecan/recept/pecanniklas.html">Pecanpaj</a>
               
             </li>
             <li>
             <p id="ratingApplePie"></p> 
-            <a href="applepie/index.html">Äppelpaj</a>
+            <a href="./applepie/index.html">Äppelpaj</a>
             </li>
             <li>
             <p id="ratingMazarin"></p>
-            <a href="mazarin/recept.html">Mazarintårta</a>
+            <a href="./mazarin/recept.html">Mazarintårta</a>
             </li>
             <li>
             <p id="ratingPanncake"></p>    
-            <a href="panncake/page-2.html">Pannkakstårta</a>
+            <a href="./panncake/panncake_merged.html">Pannkakstårta</a>
             </li>
             </ul>
         </aside>
          <footer>
-             eNjug-bakery
+    <!-- väntar på mall-->
     </footer>
     </body>
+   
 </html>
