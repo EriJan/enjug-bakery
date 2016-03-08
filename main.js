@@ -711,7 +711,7 @@ function getRandomInt(min, max) {
 //todayslink
 var theNames = ["Pankakstårta", "Mazarin", "Äppelpaj", "Pecanpaj"];
 var linkToURLs = ["recept1.html", "recept2.html", "recept3.html", "recept4.html"];
-var linkToImgs = ["./img/img1.png", "./img/img2.png", "./img/img3.png", "./img/img4.png"];
+var linkToImgs = ["pecan/img/img1.png", "pecan/img/img2.png", "pecan/img/img3.png", "pecan/img/img4.png"];
 var linkId;
 linkId = getRandomInt(0, 3);
 
