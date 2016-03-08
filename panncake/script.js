@@ -4,96 +4,9 @@ var starBoxClick = 1;
 
  $("document").ready(function() {
     
-    reBind();
-    getData();
     $("#slider[type=range]").val(localStorage.getItem("numberOfPortions"));
     getPortions();
-     
-    $(window).load(function(){
-    $(".loader").html("<img src='ajax-loader.gif'>");
-     });
-       
-     $(document).ajaxStart(function() {
-         $(".loader").show();
-     });
-
-     $(document).ajaxComplete(function(){  
-         $(".loader").hide();
-     });
-     
-     $(".animatediv").mouseover(function(){
-        $(".column").animate({
-            opacity: 1.0
-        },3000, "easeInQuad", function(){
-            
-        });
-     });  
-
-     
-    $(".starbox").click(function(){
-        if(starBoxClick % 2 === 0){
-            reBind();
-        } else {
-            unDoBindings();
-        }
-        starBoxClick++;
-    });
  });
-
-function reBind(){
-    $(".starbox img").each(function(index){
-        var nr = index + 1;
-        $(this).click(function(){
-        $(".starbox img").each(function(index){
-        if(index < nr){
-        $(this).attr("src", "filledStar.png");
-        }             
-    });
-                
-        numberOfClick++;
-        sessionStorage.setItem("numberOfClick", numberOfClick);
-        $.ajax({
-            method: "GET",
-            url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=698db01736ec3abd&recipe=pannkakst%C3%A5rta&rating="+nr,
-            success: function(data){
-                $(thanks).text("Tack för din röst! Du har röstat " + sessionStorage.getItem("numberOfClick") + " gånger");
-                getData(); 
-                }
-            });
-        });
-    });
-    
-    
-    $(".starbox img").each(function(index){
-        $(this).mouseleave(function(){
-            $(".starbox img").each(function(index){
-         $(this).attr("src", "unFStar.png");
-            });    
-        });
-    });  
-    
-    
-       $(".starbox img").each(function(index){
-           var nr = index + 1; 
-            $(this).mouseover(function(){
-            $(".starbox img").each(function(index){
-                if(index < nr){
-                    $(this).attr("src", "filledStar.png");
-                }    
-            });
-        });
-    }); 
-}
-
-
-function unDoBindings(){
-    $(".starbox img").each(function(index){
-        $(this).unbind("mouseover");
-        $(this).unbind("mouseleave"); 
-        $(this).unbind("click");
-        });  
-}
-
 
 
 function addPortions(inValue, addValue) {
@@ -120,10 +33,10 @@ var originalSizePannkaka = [1, 1/3, 2/3, 1/3, 1/3];
 var originalSizeFyllning = [4/5, 1, 1, 1/2, 2/3];
 
 function getPortions (){ 
-    if(document.getElementById("slider") == null){
+    if(document.getElementById("numCakes") == null){
         numberOfPortions = localStorage.getItem("numberOfPortions");
     } else {
-    numberOfPortions = document.getElementById("slider").value;
+    numberOfPortions = document.getElementById("numCakes").value;
     }
 
     prependFyllning(numberOfPortions);
@@ -182,23 +95,3 @@ function appendParagraf(portion){
     $("#numberOf").html($("#numberOf").text().replace(/\d/g, ''));
     $("#numberOf").append(portion);
 }
-
-
-  function getData(){
-     $.ajax({
-        method: "GET",
-        url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=698db01736ec3abd&recipe=pannkakst%C3%A5rta",
-         beforeSend: function(){
-            //$(".loader").show();
-             console.log("I before send");
-            
-         },
-        success: function(data) {
-            $("#rating").text("Pannkakstårtans betyg: "+data.rating.toFixed(2));  
-            $("#votes").text("Antal röster: "+data.votes);  
-          //  $(".loader").hide(); 
-             console.log("I success");
-        }, 
-         
-    }); 
-   }

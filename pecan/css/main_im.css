@@ -1,0 +1,147 @@
+header {
+    color: #808080  !important;
+    font-size: 1em !important;
+    padding:5px !important;
+    text-align:center !important;
+    text-transform: uppercase !important;
+}
+
+footer {
+    color:#808080 !important;
+    clear:both !important;
+    text-align:center !important;
+    padding:5px !important;
+}
+
+header img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+h1 {
+    font-size:3em !important;
+    text-align:center !important;
+    padding:5px !important;
+}
+
+h2 {
+    font-size:2em !important;
+    text-align:center !important;
+    padding:5px !important;
+}
+
+p {
+    font-size:1em !important;
+    text-align:justify !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+}
+
+body {
+    background-image: url("food/food.png") !important;
+    background-repeat: repeat !important;
+
+}
+
+body p {
+    text-align: justify !important;
+    padding-left: 20% !important;
+    padding-right: 20% !important;
+    padding-bottom: 5% !important;
+}
+
+img {
+    border-radius: 15px !important;
+}
+
+nav {
+    float: none !important;
+    text-align:center !important;
+    padding-left: 0% !important;
+    padding-right: 5% !important;
+}
+
+nav h3 {
+    text-align: center !important;
+}
+
+
+aside {
+    float: left !important;
+    padding-left: 5% !important;
+    padding-bottom: 5% !important;
+}
+
+article {
+    float: left !important;
+    width: 50% !important;
+    padding-left: 5% !important;
+}
+
+section {
+    float: left !important;
+    width: 50% !important;
+    padding-left: 5% !important;
+}
+
+aside h2 {
+    font-size:1.5em !important;
+    text-align:left !important;
+    padding:0px !important;
+}
+
+aside h3 {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+li {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    list-style-position: inside !important;
+}
+
+.votingStars {
+    font-size:3em !important;
+    text-align:center !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+
+}
+
+.votingStars span {
+    cursor: pointer !important;
+}
+
+.rating {
+    font-size:1em !important;
+    text-align:center !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+#wait {
+    text-align: center !important;
+}
+
+@media screen and (max-width: 500px) {
+    aside {
+        float: none !important;
+        width: 100% !important;
+        padding-left: 25% !important;
+        text-align: left !important;
+    }
+
+    article {
+        float: none !important;
+        width: 100% !important;
+        padding-left: 1% !important;
+        padding-right: 1% !important;
+    }
+}
