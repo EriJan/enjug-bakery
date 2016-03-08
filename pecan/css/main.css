@@ -4,7 +4,14 @@ header {
     padding:5px;
     text-align:center;
     text-transform: uppercase;
-}   
+}
+
+footer {
+    color:#808080;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}
 
 header img {
     max-width: 100%;
@@ -14,13 +21,13 @@ header img {
 h1 {
     font-size:3em;
     text-align:center;
-    padding:5px; 
+    padding:5px;
 }
 
 h2 {
     font-size:2em;
     text-align:center;
-    padding:5px; 
+    padding:5px;
 }
 
 p {
@@ -33,24 +40,16 @@ p {
 }
 
 body {
-    background-image: url("food/food.png");
+    background-image: url("../../food/food.png");
     background-repeat: repeat;
-   
-}
 
-body p {
-    text-align: justify;
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-bottom: 5%;
 }
-
 img {
     border-radius: 15px;
 }
 
 nav {
-    float: none;    
+    float: none;
     text-align:center;
     padding-left: 0%;
     padding-right: 5%;
@@ -60,23 +59,44 @@ nav h3 {
     text-align: center;
 }
 
-aside {
+section {
     float: left;
+    width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+article h3 {
+    font-size:1.5em;
+    text-align:center;
+    padding:3px;
+}
+
+article:first-child {
+    float: left;
+    width: 90%;
     padding-left: 5%;
-    padding-bottom: 5%;
+    padding-right: 5%;
 }
 
 article {
     float: left;
-    width: 50%;
+    width: 60%;
     padding-left: 5%;
+    padding-right: 5%;
 }
 
+aside {
+    float: left;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
 
 aside h2 {
     font-size:1.5em;
     text-align:left;
-    padding:0px;     
+    padding:0px;
 }
 
 aside h3 {
@@ -91,13 +111,13 @@ li {
 }
 
 .votingStars {
-    font-size:3em;
+    font-size:24px;
     text-align:center;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 0px;
     margin-left: 0px;
- 
+
 }
 
 .votingStars span {
@@ -113,22 +133,31 @@ li {
     margin-left: 0px;
 }
 
+.rate{
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+    text-shadow: 0px 1px 2px #000001;
+}
+
 #wait {
     text-align: center;
 }
 
-@media screen and (max-width: 500px) {
-    aside {
-        float: none;
-        width: 100%;
-        padding-left: 25%;
-        text-align: left;
-    }
+#loading {
+    font-size:1em;
+    text-align:center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
 
-    article {
-        float: none;
-        width: 100%;
-        padding-left: 1%;
-        padding-right: 1%;
-    }
+#average {
+    font-size:1em;
+    text-align:center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 0px;
+    margin-left: 0px;
 }

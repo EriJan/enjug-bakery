@@ -1,12 +1,8 @@
 
-// Key 7cd7a288a851a28b
-// GET https://edu.oscarb.se/sjk15/api/recipe/?api_key=7cd7a288a851a28b&recipe=mazarint%C3%A5rta
-// GET https://edu.oscarb.se/sjk15/api/recipe/?api_key=7cd7a288a851a28b&recipe=mazarint%C3%A5rta&rating=4
-
 function updateVotingResult () {
     $.ajax({
         method: "GET",
-        url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=7cd7a288a851a28b&recipe=mazarint%C3%A5rta",
+        url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=698db01736ec3abd&recipe=pannkakst%C3%A5rta",
         success: function(data) {
             //return data;
             var rating = data.rating.toFixed(1);
@@ -21,7 +17,7 @@ function updateVotingResult () {
 function putVoteInDB (rating) {
     $.ajax({
         method: "GET",
-        url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=7cd7a288a851a28b&recipe=mazarint%C3%A5rta&rating=" + rating,
+        url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=698db01736ec3abd&recipe=pannkakst%C3%A5rta&rating=" + rating,
         success: function(data) {  
             updateVotingResult();
         }, 

@@ -4,24 +4,16 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-html {
-  font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-}
 
-article,
-aside,
+
+
+
 details,
 figcaption,
 figure,
-footer,
-header,
 hgroup,
 main,
 menu,
-nav,
-section,
 summary {
   display: block;
     margin: 0 auto;
@@ -58,10 +50,7 @@ strong {
 dfn {
   font-style: italic;
 }
-h1 {
-  margin: .67em 0;
-  font-size: 2em;
-}
+
 mark {
   color: #000;
   background: #ff0;
@@ -82,9 +71,7 @@ sup {
 sub {
   bottom: -.25em;
 }
-img {
-  border: 0;
-}
+
 svg:not(:root) {
   overflow: hidden;
 }
@@ -188,19 +175,7 @@ th {
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
-  *,
-  *:before,
-  *:after {
-    color: #000 !important;
-    text-shadow: none !important;
-    background: transparent !important;
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
-  }
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
+
   a[href]:after {
     content: " (" attr(href) ")";
   }
@@ -220,13 +195,8 @@ th {
   thead {
     display: table-header-group;
   }
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-  img {
-    max-width: 100% !important;
-  }
+  
+
   p,
   h2,
   h3 {
@@ -242,21 +212,21 @@ th {
   }
   .btn > .caret,
   .dropup > .btn > .caret {
-    border-top-color: #000 !important;
+    border-top-color: #000 ;
   }
   .label {
     border: 1px solid #000;
   }
   .table {
-    border-collapse: collapse !important;
+    border-collapse: collapse ;
   }
   .table td,
   .table th {
-    background-color: #fff !important;
+    background-color: #fff ;
   }
   .table-bordered th,
   .table-bordered td {
-    border: 1px solid #ddd !important;
+    border: 1px solid #ddd ;
   }
 }
 @font-face {
@@ -1064,29 +1034,10 @@ th {
 .glyphicon-menu-up:before {
   content: "\e260";
 }
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-html {
-  font-size: 10px;
 
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #333;
-  background-color: #fff;
-}
+
+
+
 input,
 button,
 select,
@@ -1112,9 +1063,7 @@ a:focus {
 figure {
   margin: 0;
 }
-img {
-  vertical-align: middle;
-}
+
 .img-responsive,
 .thumbnail > img,
 .thumbnail a > img,
@@ -1171,14 +1120,11 @@ hr {
 [role="button"] {
   cursor: pointer;
 }
-h1,
-h2,
+
 h3,
 h4,
 h5,
 h6,
-.h1,
-.h2,
 .h3,
 .h4,
 .h5,
@@ -1216,10 +1162,7 @@ h6 .small,
   line-height: 1;
   color: #777;
 }
-h1,
-.h1,
-h2,
-.h2,
+
 h3,
 .h3 {
   margin-top: 20px;
@@ -1262,14 +1205,7 @@ h6 .small,
 .h6 .small {
   font-size: 75%;
 }
-h1,
-.h1 {
-  font-size: 36px;
-}
-h2,
-.h2 {
-  font-size: 30px;
-}
+
 h3,
 .h3 {
   font-size: 24px;
@@ -1286,9 +1222,7 @@ h6,
 .h6 {
   font-size: 12px;
 }
-p {
-  margin: 0 0 10px;
-}
+
 .lead {
   margin-bottom: 20px;
   font-size: 16px;
@@ -3522,7 +3456,7 @@ tbody.collapse.in {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 50%;
   z-index: 1000;
   display: none;
   float: left;
@@ -4201,10 +4135,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
             box-shadow: none;
   }
   .navbar-collapse.collapse {
-    display: block !important;
-    height: auto !important;
+    display: block ;
+    height: auto ;
     padding-bottom: 0;
-    overflow: visible !important;
+    overflow: visible ;
   }
   .navbar-collapse.in {
     overflow-y: visible;
@@ -4484,10 +4418,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 @media (min-width: 768px) {
   .navbar-left {
-    float: left !important;
+    float: left ;
   }
   .navbar-right {
-    float: right !important;
+    float: right ;
     margin-right: -15px;
   }
   .navbar-right ~ .navbar-right {
@@ -6464,8 +6398,6 @@ button.close {
 .clearfix:after,
 .dl-horizontal dd:before,
 .dl-horizontal dd:after,
-.container:before,
-.container:after,
 .container-fluid:before,
 .container-fluid:after,
 .row:before,
@@ -6519,16 +6451,16 @@ button.close {
   margin-left: auto;
 }
 .pull-right {
-  float: right !important;
+  float: right ;
 }
 .pull-left {
-  float: left !important;
+  float: left ;
 }
 .hide {
-  display: none !important;
+  display: none ;
 }
 .show {
-  display: block !important;
+  display: block ;
 }
 .invisible {
   visibility: hidden;
@@ -6541,7 +6473,7 @@ button.close {
   border: 0;
 }
 .hidden {
-  display: none !important;
+  display: none ;
 }
 .affix {
   position: fixed;
@@ -6553,7 +6485,7 @@ button.close {
 .visible-sm,
 .visible-md,
 .visible-lg {
-  display: none !important;
+  display: none ;
 }
 .visible-xs-block,
 .visible-xs-inline,
@@ -6567,193 +6499,193 @@ button.close {
 .visible-lg-block,
 .visible-lg-inline,
 .visible-lg-inline-block {
-  display: none !important;
+  display: none ;
 }
 @media (max-width: 767px) {
   .visible-xs {
-    display: block !important;
+    display: block ;
   }
   table.visible-xs {
-    display: table !important;
+    display: table ;
   }
   tr.visible-xs {
-    display: table-row !important;
+    display: table-row ;
   }
   th.visible-xs,
   td.visible-xs {
-    display: table-cell !important;
+    display: table-cell ;
   }
 }
 @media (max-width: 767px) {
   .visible-xs-block {
-    display: block !important;
+    display: block ;
   }
 }
 @media (max-width: 767px) {
   .visible-xs-inline {
-    display: inline !important;
+    display: inline ;
   }
 }
 @media (max-width: 767px) {
   .visible-xs-inline-block {
-    display: inline-block !important;
+    display: inline-block ;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .visible-sm {
-    display: block !important;
+    display: block ;
   }
   table.visible-sm {
-    display: table !important;
+    display: table ;
   }
   tr.visible-sm {
-    display: table-row !important;
+    display: table-row ;
   }
   th.visible-sm,
   td.visible-sm {
-    display: table-cell !important;
+    display: table-cell ;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .visible-sm-block {
-    display: block !important;
+    display: block ;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .visible-sm-inline {
-    display: inline !important;
+    display: inline ;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .visible-sm-inline-block {
-    display: inline-block !important;
+    display: inline-block ;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .visible-md {
-    display: block !important;
+    display: block ;
   }
   table.visible-md {
-    display: table !important;
+    display: table ;
   }
   tr.visible-md {
-    display: table-row !important;
+    display: table-row ;
   }
   th.visible-md,
   td.visible-md {
-    display: table-cell !important;
+    display: table-cell ;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .visible-md-block {
-    display: block !important;
+    display: block ;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .visible-md-inline {
-    display: inline !important;
+    display: inline ;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .visible-md-inline-block {
-    display: inline-block !important;
+    display: inline-block ;
   }
 }
 @media (min-width: 1200px) {
   .visible-lg {
-    display: block !important;
+    display: block ;
   }
   table.visible-lg {
-    display: table !important;
+    display: table ;
   }
   tr.visible-lg {
-    display: table-row !important;
+    display: table-row ;
   }
   th.visible-lg,
   td.visible-lg {
-    display: table-cell !important;
+    display: table-cell ;
   }
 }
 @media (min-width: 1200px) {
   .visible-lg-block {
-    display: block !important;
+    display: block ;
   }
 }
 @media (min-width: 1200px) {
   .visible-lg-inline {
-    display: inline !important;
+    display: inline ;
   }
 }
 @media (min-width: 1200px) {
   .visible-lg-inline-block {
-    display: inline-block !important;
+    display: inline-block ;
   }
 }
 @media (max-width: 767px) {
   .hidden-xs {
-    display: none !important;
+    display: none ;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .hidden-sm {
-    display: none !important;
+    display: none ;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .hidden-md {
-    display: none !important;
+    display: none ;
   }
 }
 @media (min-width: 1200px) {
   .hidden-lg {
-    display: none !important;
+    display: none ;
   }
 }
 .visible-print {
-  display: none !important;
+  display: none ;
 }
 @media print {
   .visible-print {
-    display: block !important;
+    display: block ;
   }
   table.visible-print {
-    display: table !important;
+    display: table ;
   }
   tr.visible-print {
-    display: table-row !important;
+    display: table-row ;
   }
   th.visible-print,
   td.visible-print {
-    display: table-cell !important;
+    display: table-cell ;
   }
 }
 .visible-print-block {
-  display: none !important;
+  display: none ;
 }
 @media print {
   .visible-print-block {
-    display: block !important;
+    display: block ;
   }
 }
 .visible-print-inline {
-  display: none !important;
+  display: none ;
 }
 @media print {
   .visible-print-inline {
-    display: inline !important;
+    display: inline ;
   }
 }
 .visible-print-inline-block {
-  display: none !important;
+  display: none ;
 }
 @media print {
   .visible-print-inline-block {
-    display: inline-block !important;
+    display: inline-block ;
   }
 }
 @media print {
   .hidden-print {
-    display: none !important;
+    display: none ;
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */

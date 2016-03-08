@@ -64,6 +64,7 @@ $(document).ready(function(){
             success: function() {
                 $(".rating").hide();
                 $("#average").getVotes();
+                
             }
         })
         $(this).animate({fontSize: '45px'},100);
@@ -87,6 +88,7 @@ $.fn.getVotes = function () {
             averageStars = data.rating.toFixed(0);
             $("#"+averageStars).prevAll().andSelf().css("color", "yellow");
             $("#"+averageStars).nextAll().css("color", "black");
+            $("#ratingApplePie").text(data.rating.toFixed(2));
         }, 
     });
 };
