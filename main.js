@@ -59,7 +59,8 @@ function changeImgText() { //this is for the hintclicker text..
 function changePresText(name){
           
     var lista = document.getElementById("tipOfDay").childNodes;
-    for(var i = 0; i < lista.length; i++){
+    var i;
+    for(i = 0; i < lista.length; i++){
         if(lista[i].id !== undefined){
         if(lista[i].id == name){
            lista[i].style.display = 'block';
@@ -70,27 +71,71 @@ function changePresText(name){
     }
 }
 
-function rateCakes(){
-var lista = document.getElementById("ratingApplePie").textContent;
-    console.log(lista);
+function highScoreItem(urlStr, htmlStr, score) {
+    this.urlStr = urlStr;
+    this.htmlStr = htmlStr;
+    this.score = score;
 }
-/*
-<span id = "hintRecept">                
-                    <a href="recept/pecanniklas.html">
-                        <img alt="En bild visas på en delikat paj" src="img/pecanpaj.png" />
-                    </a>
-                
-                </span>
-*/
 
-//linkClass.getInfo();
-//alert(linkobjectAlert());
-//linkobject();
-window.onload = function () {
+var applePieUrl = "https://edu.oscarb.se/sjk15/api/recipe/?api_key=d7607304c8de1b93&recipe=applepiemarcus";
+
+var panncakeUrl = "https://edu.oscarb.se/sjk15/api/recipe/?api_key=698db01736ec3abd&recipe=pannkakst%C3%A5rta";
+
+var pecanUrl = "https://edu.oscarb.se/sjk15/api/recipe/?api_key=d7db3379c942dc44&recipe=pecanpaj";
+
+var mazarinUrl = "https://edu.oscarb.se/sjk15/api/recipe/?api_key=7cd7a288a851a28b&recipe=mazarint%C3%A5rta";
+
+var applePieHtml = '<a href="./applepie/index.html">Äppelpaj</a>';
+
+var panncakeHtml = '<a href="./panncake/panncake_merged.html">Pannkakstårta</a>';
+
+var pecanHtml = '<a href="./pecan/recept/pecanniklas.html">Pecanpaj</a>';
+
+var mazarinHtml = '<a href="./mazarin/index.html">Mazarintårta</a>';
+
+var hsItemList = [];
+hsItemList[0] = new highScoreItem(applePieUrl, applePieHtml, 0.0);
+hsItemList[1] = new highScoreItem(mazarinUrl, mazarinHtml, 0.0);
+hsItemList[2] = new highScoreItem(panncakeUrl, panncakeHtml, 0.0);
+hsItemList[3] = new highScoreItem(pecanUrl, pecanHtml, 0.0);
+
+function setHighScore () {
+    hsItemList.sort(function(a,b) {return b.score - a.score});
+    var listItem = $("#rating li").first();
+    var i;
+    for (i = 0; i < 3; i++) {
+        listItem.html(hsItemList[i].htmlStr);
+        listItem.append(" ("); 
+        listItem.append(hsItemList[i].score.toString());
+        listItem.append(")"); 
+        listItem = listItem.next();
+    }
+}
+
+function updateAllVotingResults (callCount) {
+    $.ajax({
+        method: "GET",
+        url: hsItemList[callCount].urlStr,
+        success: function(data) {
+            hsItemList[callCount].score = data.rating.toFixed(1);
+            callCount++;
+            if (callCount < 4 && callCount >= 0) {
+                updateAllVotingResults(callCount);
+            } else {
+                setHighScore();
+            }
+        },
+    });   
+}
+
+$(document).ready(function () {
+    updateAllVotingResults(0);
+});
+
+
+window.onload = function () {   
     'use strict';
     changeImg();
     changeImgText();
     //rateCakes();
- 
-    
 };
