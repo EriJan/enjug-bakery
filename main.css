@@ -51,7 +51,7 @@ img {
 nav {
     float: none;
     text-align:center;
-    padding-left: 0%;
+    padding-left: 5%;
     padding-right: 5%;
 }
 
@@ -135,4 +135,35 @@ li {
 
 #wait {
     text-align: center;
+}
+
+.box {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.tip{
+    text-align: center;
+    float: none;
+}
+
+.sinking{
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
+.free{
+    float:none;
+}
+
+.fright {
+    float: right;
+}
+
+.tip2 {
+        margin-left: auto;
+    margin-right: auto;
+    width: 900px;
 }

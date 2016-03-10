@@ -9,14 +9,12 @@
         <script src="./pecan/js/bootstrap.js"></script>
 		<link rel="stylesheet" type="text/css" href="./pecan/css/bootstrap.css">
         
-        <link rel="stylesheet" type="text/css" href="./pecan/css/main.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
 
                   
         <script src="main.js"></script>
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-           <script src="panncake/script.js"></script>
-        <script src="applepie/recept/script.js"></script>
-         <script src="mazarin/voting.js"></script>
+        <script src="panncake/script.js"></script>
          <script src="pecan/js/new.js"></script> 
     </head>
     
@@ -41,7 +39,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class = "btn-warning " href="./mazarin/recept.html">
+                    <a class = "btn-warning " href="./mazarin/index.html">
                         Mazarintårta
                     </a>
                 </li>
@@ -69,12 +67,13 @@
             </ul>
         </div>
     </nav> 
+        <div class="box">
       <section>
           <article>
         <h1>
         Vad finns i ditt skafferi?
         </h1>
-        <p>
+        <p class="box">
             Våra recept förgyller det du har i köksskåpet! <br>
             Här hittar du något för alla tillfällen och alla samker. Så - följ recepten, sätt på kaffepannan eller stick sugröret i saftglaset och kör sedan igång med kalaset!
         </p>
@@ -85,9 +84,9 @@
              <h2>
             Veckans tips!
          </h2>
-            <p>
+            <p class="tip">
             <br>Nu vill vi rekommendera: 
-                <span id='imgText'>Bakmums</span>!<br/>
+                <span id='imgText'>Bakmums</span>!<br>
                
                 <a href='#' onclick='changeClick()'>
                     <img src="pecan/img/img1.png" alt="En bild visas på en delikat paj" id = "changingImg" />
@@ -95,6 +94,7 @@
                 
             </p>
                  </article>
+             <div class="box">
         <aside id="tipOfDay">
        
            <div id="Pankakstårta">
@@ -124,15 +124,15 @@
             </p>
                 </div>
         </aside>
-                     </section>
-
+                 </div>
+        </section>
         <aside id="category">
             <h2>Våra bakverk är indelade i två kategorier: 
             </h2>
             <p>Tårtor</p>
             <ul>
             <li>
-                <a href="./mazarin/recept.html">Mazarintårta</a> </li>
+                <a href="./mazarin/index.html">Mazarintårta</a> </li>
                <li>
                 <a href="panncake/panncake_merged.html">Pannkakstårta</a>
             </li>
@@ -141,36 +141,30 @@
             <p>Pajer</p>
             <ul>
             <li>
-                <a href="applepie/recept/">Äppelpaj</a></li>
-               <li>
+                <a href="applepie/recept/">Äppelpaj</a>
+            </li>
+            <li>
                 <a href="pecan/index.html">Pecanpaj</a>
             </li>
             </ul>
         </aside>
-        <aside >
+        <aside class="fright">
             <h2>
             Topplista som baseras på omröstning
             </h2>
-        <ul id="rating">
-            <li>
-            <p id="ratingPecan"> </p>
-            <a href="./pecan/recept/pecanniklas.html">Pecanpaj</a>
-              
-            </li>
-            <li>
-            <p id="ratingApplePie"></p> 
-            <a href="./applepie/index.html">Äppelpaj</a>
-            </li>
-            <li>
-            <p id="ratingMazarin"></p>
-            <a href="./mazarin/recept.html">Mazarintårta</a>
-            </li>
-            <li>
-            <p id="ratingPanncake"></p>    
-            <a href="./panncake/panncake_merged.html">Pannkakstårta</a>
-            </li>
-            </ul>
+            <ol id="rating">
+                <li>
+                    <a href="./applepie/index.html">Äppelpaj</a>
+                </li>
+                <li>
+                    <a href="./mazarin/index.html">Mazarintårta</a>
+                </li>
+                <li>
+                    <a href="./panncake/panncake_merged.html">Pannkakstårta</a>
+                </li>
+            </ol>
         </aside>
+                </div>
          <footer>
     <!-- väntar på mall-->
     </footer>
