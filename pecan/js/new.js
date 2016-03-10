@@ -28,10 +28,7 @@ var alert;
 var pecanPie = [2.5, 0.5, 150, 0.5, 0.5, 0.5, 0.5 ];
 var pecanFilling = [2, 125, 1.5, 0.5, 3, 2, 1, 150 ];
 
-if (localStorage.pecanAmount === null) {
-    localStorage.pecanAmount = 1;
-    changeAmount(this.value);
-}
+
 
 
 
@@ -62,8 +59,22 @@ function changeAmount(factor) {
 	autoList(factor, "fyllning");
 }
 
+ if (typeof (Storage) == "undefined") {
+     localStorage.pecanAmount = 1;
+     changeAmount(this.value);
+}
+
 $(document).ready(function () {
     'use strict';
+    
+     if (typeof (Storage) == "undefined") {
+        alert("inne i localS2");
+       localStorage.pecanAmount = 1;
+       document.getElementById("pies").innerHTML = 1;
+       changeAmount(1);
+    }
+    
+    
     $("#pies").val(localStorage['pecanAmount']);
     $("#average").getVotes();
     $(".rate").hover(function () {
