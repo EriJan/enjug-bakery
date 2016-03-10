@@ -46,7 +46,11 @@ function IncognitoDialog() {
 function setAmount(input) {
     'use strict';
     //alert("saving input");
-    localStorage.portions = Number(input);
+    if (input < 1 || input > 10) {
+        input = 1;
+        document.getElementById("pies").innerHTML = input;
+    }
+    localStorage.pecanAmount = Number(input);
 }
 //------------
 var glogalnumberofpies = 1;
@@ -687,16 +691,16 @@ function dontClick() {
 function getLastSessionAmount() {
     'use strict';
     if (typeof (Storage) !== "undefined") {
-        if (localStorage.portions) { //vi har data innan!
+        if (localStorage.pecanAmount) { //vi har data innan!
             //alert("HAR localStore sedan innan... : " + Number(localStorage.portions));
             //localStorage.portions;
-            document.getElementById("userInput").innerHTML = Number(localStorage.portions);
-            document.getElementById("numberofpaj").innerHTML = Number(localStorage.portions) + " pajer";
+            document.getElementById("userInput").innerHTML = Number(localStorage.pecanAmount);
+            document.getElementById("numberofpaj").innerHTML = Number(localStorage.pecanAmount) + " pajer";
             //displayOutput();
-            var protionLasttime = Number(localStorage.portions);
+            var protionLasttime = Number(localStorage.pecanAmount);
             setOutput(protionLasttime);
         } else {
-            localStorage.portions = 1;
+            localStorage.pecanAmount = 1;
         //document.getElementById("userInput").innerHTML = localStorage.portions;
         //document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
             //alert("gör inget, har inget innan...");

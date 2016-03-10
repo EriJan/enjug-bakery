@@ -30,6 +30,7 @@ var pecanFilling = [2, 125, 1.5, 0.5, 3, 2, 1, 150 ];
 
 if (localStorage.pecanAmount === null) {
     localStorage.pecanAmount = 1;
+    changeAmount(this.value);
 }
 
 if (localStorage.voteCheckPecan === null) {
@@ -53,7 +54,12 @@ function autoList(factor, type) {
 
 function changeAmount(factor) {
     'use strict';
-    localStorage.pecanAmount = factor;
+    if (factor < 1 || factor > 10) {
+        factor = 1;
+        document.getElementById("pies").innerHTML = factor;
+    }
+    localStorage.pecanAmount = Number(factor);
+    //localStorage.pecanAmount = factor;
     autoList(factor, "pecanPie");
 	autoList(factor, "fyllning");
 }
