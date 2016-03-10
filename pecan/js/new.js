@@ -67,8 +67,7 @@ function changeAmount(factor) {
 $(document).ready(function () {
     'use strict';
     
-     if (typeof (Storage) == "undefined") {
-        alert("inne i localS2");
+     if (typeof (Storage) == "undefined") {        
        localStorage.pecanAmount = 1;
        document.getElementById("pies").innerHTML = 1;
        changeAmount(1);
