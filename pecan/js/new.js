@@ -33,9 +33,7 @@ if (localStorage.pecanAmount === null) {
     changeAmount(this.value);
 }
 
-if (localStorage.voteCheckPecan === null) {
-    localStorage.voteCheckPecan = 0;
-}
+
 
 function autoList(factor, type) {
     'use strict';
