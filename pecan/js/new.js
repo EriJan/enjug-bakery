@@ -64,6 +64,10 @@ function changeAmount(factor) {
 
 $(document).ready(function () {
     'use strict';
+    if (localStorage.pecanAmount === null) {
+    localStorage.pecanAmount = 1;
+    changeAmount(this.value);
+    }
     $("#pies").val(localStorage['pecanAmount']);
     $("#average").getVotes();
     $(".rate").hover(function () {
